@@ -1,0 +1,1473 @@
+timestamp,problem_id,feedback_strategy,attempt,success,execution_time,code,error,test_feedback
+2026-08-18T14:45:39.914065,mbpp_11,baseline,1,False,1.4777,"def remove_first_last(s, ch):
+    return s[:s.find(ch)] + s[s.rfind(ch)+1:]","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmph75b689f.py"", line 8, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:46:02.029861,mbpp_11,baseline,2,False,3.0115,"def remove_occurrences(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index+1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index+1:]
+    return string","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmplz_zdzti.py"", line 14, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:46:23.360613,mbpp_11,baseline,3,False,2.2656,"def remove_first_last(string, char):
+    first_index = string.find(char)
+    last_index = string.rfind(char)
+    if first_index != -1 and last_index != -1 and first_index != last_index:
+        return string[:first_index] + string[first_index+1:last_index] + string[last_index+1:]
+    else:
+        return string","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpymc68sfo.py"", line 13, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:46:35.562491,mbpp_11,baseline,4,False,2.7109,"def remove_first_last(s, ch):
+    if ch in s:
+        s = s.replace(ch, '', 1)
+        s = s[::-1].replace(ch, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp0anvjpju.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:46:50.014980,mbpp_11,baseline,5,False,2.7245,"def remove_occurrences(s, ch):
+    if ch in s:
+        s = s[::-1]
+        s = s.replace(ch, '', 1)
+        s = s[::-1]
+        s = s.replace(ch, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmph1vwmz28.py"", line 13, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:46:52.953969,mbpp_11,execution,1,False,2.9354,"def remove_first_last(s, ch):
+    return s[:s.find(ch)] + s[s.rfind(ch)+1:]","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpez1ajkpq.py"", line 8, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:47:13.514535,mbpp_11,execution,2,False,1.3104,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp5mu0iv24.py"", line 9, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:47:49.860435,mbpp_11,execution,3,False,2.0867,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s
+
+# Test cases
+assert remove_first_last(""hello"",""l"") == ""heo""
+assert remove_first_last(""aardvark"",""k"") == ""aardvar""
+assert remove_first_last(""counting"", ""n"") == ""counti""
+assert remove_first_last(""xylophone"", ""x"") == ""ylophone""
+assert remove_first_last(""xylophone"", ""z"") == ""xylophone""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmppmo_9vo_.py"", line 10, in <module>
+    assert remove_first_last(""counting"", ""n"") == ""counti""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+",
+2026-08-18T14:48:29.983613,mbpp_11,execution,4,False,1.3032,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s
+
+# Test cases
+assert remove_first_last(""hello"",""l"") == ""heo""
+assert remove_first_last(""aardvark"",""k"") == ""aardvar""
+assert remove_first_last(""counting"", ""n"") == ""counti""
+assert remove_first_last(""xylophone"", ""x"") == ""ylophone""
+assert remove_first_last(""xylophone"", ""z"") == ""xylophone""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp5103yief.py"", line 10, in <module>
+    assert remove_first_last(""counting"", ""n"") == ""counti""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+",
+2026-08-18T14:52:54.271289,mbpp_11,execution,5,False,2.4866,"def remove_first_last(s, ch):
+    first_index = s.find(ch)
+    last_index = s.rfind(ch)
+    if first_index == -1 or last_index == -1:
+        return s
+    else:
+        return s[:first_index] + s[last_index+1:]
+
+# Test cases
+assert remove_first_last(""hello"",""l"") == ""heo""
+assert remove_first_last(""aardvark"",""k"") == ""aardvar""
+assert remove_first_last(""counting"", ""n"") == ""counti""
+assert remove_first_last(""xylophone"", ""x"") == ""ylophone""
+assert remove_first_last(""xylophone"", ""z"") == ""xylophone""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp0fdqrk6c.py"", line 14, in <module>
+    assert remove_first_last(""counting"", ""n"") == ""counti""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+",
+2026-08-18T14:52:56.232847,mbpp_11,unit_test,1,False,1.9574,"def remove_first_last(s, ch):
+    return s[:s.find(ch)] + s[s.rfind(ch)+1:]","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzcxuosii.py"", line 8, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:53:14.795494,mbpp_11,unit_test,2,False,1.6958,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1vcaepls.py"", line 9, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:53:33.576840,mbpp_11,unit_test,3,False,2.7244,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp83r95ndg.py"", line 9, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:54:54.103666,mbpp_11,unit_test,4,False,3.3968,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpk8vgda3h.py"", line 9, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:55:06.698072,mbpp_11,unit_test,5,False,1.3791,"def remove_first_last(s, ch):
+    s = s.replace(ch, '', 1)
+    return s[:s.rfind(ch)] + s[s.rfind(ch)+1:] if ch in s else s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1j64fryq.py"", line 9, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:55:09.516738,mbpp_11,reflection,1,False,2.8156,"def remove_first_last(s, ch):
+    return s[:s.find(ch)] + s[s.rfind(ch)+1:]","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp3hsn1i6y.py"", line 8, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T14:55:36.542184,mbpp_11,reflection,2,False,1.4892,"The previous solution failed because it didn't handle the case where the given character is not present in the string. This can be solved by replacing all occurrences of the character with an empty string before and after removing the first and last occurrence. Here is the corrected Python code:
+
+```python
+def remove_first_last(s, ch):
+    return s.replace(ch, '', s.count(ch) - 1).strip(ch)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpmx87h0w7.py"", line 3
+    The previous solution failed because it didn't handle the case where the given character is not present in the string. This can be solved by replacing all occurrences of the character with an empty string before and after removing the first and last occurrence. Here is the corrected Python code:
+                                                ^
+SyntaxError: unterminated string literal (detected at line 3)
+",
+2026-08-18T14:56:08.306591,mbpp_11,reflection,3,False,1.5619,"The error is due to an unterminated string literal, as indicated by the error message. This is because the previous code was not properly terminated with a closing quote. Here is the corrected Python code:
+
+```python
+def remove_first_last(s, ch):
+    return s.replace(ch, '', s.count(ch) - 1).strip(ch)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpm9h7xcon.py"", line 3
+    The error is due to an unterminated string literal, as indicated by the error message. This is because the previous code was not properly terminated with a closing quote. Here is the corrected Python code:
+        ^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T14:56:36.598134,mbpp_11,reflection,4,False,3.2107,"The previous solution failed because it was not properly terminated with a closing quote. Here is the corrected Python code:
+
+```python
+def remove_first_last(s, ch):
+    return s.replace(ch, '', s.count(ch)  - 1).strip(ch)","  File ""C:\Users\madhu\AppData\Local\Temp\tmph7i383ot.py"", line 3
+    The previous solution failed because it was not properly terminated with a closing quote. Here is the corrected Python code:
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T14:57:03.006434,mbpp_11,reflection,5,False,2.674,"def remove_first_last(s, ch):
+    return s.replace(ch, '', s.count(ch)  1).strip(ch)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpyzhpuqc4.py"", line 4
+    return s.replace(ch, '', s.count(ch)  1).strip(ch)
+                             ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+",
+2026-08-18T14:57:12.627423,mbpp_12,baseline,1,False,1.5236,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpl7yaozpa.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:57:25.073078,mbpp_12,baseline,2,True,4.7393,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T14:57:27.567461,mbpp_12,execution,1,False,2.4908,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpoabw_vwq.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:57:53.831455,mbpp_12,execution,2,False,2.1398,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmptx7qo0xi.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:58:12.963553,mbpp_12,execution,3,False,1.9723,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp7n1zu28a.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:58:36.777750,mbpp_12,execution,4,False,1.981,"The error is due to a typo in the assertion code. The function name was wrongly defined as 'sort_matrix' instead of 'sort_matrix_rows'. Here is the corrected Python code:
+
+```python
+def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","  File ""C:\Users\madhu\AppData\Local\Temp\tmp_pxyd3o3.py"", line 3
+    The error is due to a typo in the assertion code. The function name was wrongly defined as 'sort_matrix' instead of 'sort_matrix_rows'. Here is the corrected Python code:
+        ^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T14:59:02.986229,mbpp_12,execution,5,False,1.3417,"The error is due to a typo in the assertion code. The function name was wrongly defined as 'sort_matrix' instead of 'sort_matrix_rows'. Here is the corrected Python code:
+
+```python
+def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","  File ""C:\Users\madhu\AppData\Local\Temp\tmp211nxn0c.py"", line 3
+    The error is due to a typo in the assertion code. The function name was wrongly defined as 'sort_matrix' instead of 'sort_matrix_rows'. Here is the corrected Python code:
+        ^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T14:59:04.942374,mbpp_12,unit_test,1,False,1.9535,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzbz98ag3.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:59:19.232162,mbpp_12,unit_test,2,False,1.4141,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpch936vca.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:59:26.492888,mbpp_12,unit_test,3,False,2.8172,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpuywyrhcq.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:59:31.912393,mbpp_12,unit_test,4,False,1.4324,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpb8sxncv3.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:59:38.635365,mbpp_12,unit_test,5,False,1.5877,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpxj7l5unb.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T14:59:41.150327,mbpp_12,reflection,1,False,2.5116,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpof1is55n.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T15:00:30.622148,mbpp_12,reflection,2,False,5.7241,"The previous solution failed because the function name was incorrect. The correct function name is 'sort_matrix_rows', but you were trying to run 'sort_matrix' which is not defined.
+
+The corrected solution is:
+
+```python
+def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpv9n6hu9j.py"", line 3
+    The previous solution failed because the function name was incorrect. The correct function name is 'sort_matrix_rows', but you were trying to run 'sort_matrix' which is not defined.
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T15:01:01.285644,mbpp_12,reflection,3,False,2.9503,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpboq0qtrg.py"", line 8, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sort_matrix_rows'?
+","TEST 1: ERROR
+FAILED TEST: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'sort_matrix' is not defined
+"
+2026-08-18T15:01:37.156322,mbpp_12,reflection,4,False,3.1794,"The previous solution failed because it was trying to sort the matrix using the sum of rows, but the sum function was not applied to the rows. The key argument in the sorted function is expected to be a function that returns a value that will be used for sorting. In this case, the sum function should be used for each row of the matrix.
+
+Here is the corrected solution:
+
+```python
+def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpyo1qnex_.py"", line 3
+    The previous solution failed because it was trying to sort the matrix using the sum of rows, but the sum function was not applied to the rows. The key argument in the sorted function is expected to be a function that returns a value that will be used for sorting. In this case, the sum function should be used for each row of the matrix.
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T15:02:20.882160,mbpp_12,reflection,5,False,3.0109,"The previous solution failed because it was trying to sort the matrix using the sum of rows, but the sum function was not applied to the rows. The key argument in the sorted function is expected to be a function that returns a value that will be used for sorting. In this case, the sum function should be used for each row of the matrix.
+
+Here is the corrected solution:
+
+```python
+def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpfktmly93.py"", line 3
+    The previous solution failed because it was trying to sort the matrix using the sum of rows, but the sum function was not applied to the rows. The key argument in the sorted function is expected to be a function that returns a value that will be used for sorting. In this case, the sum function should be used for each row of the matrix.
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T15:02:37.282774,mbpp_14,baseline,1,False,2.3624,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpea7tbt4u.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:14:28.555538,mbpp_14,baseline,2,False,15101.7468,"def triangular_prism_volume(base, height, length):
+    return 0.5 * base * height * length",Execution timed out.,
+2026-08-18T19:15:08.268638,mbpp_14,baseline,3,False,1.4668,"def volume_of_triangular_prism(base, height, length):
+    return (0.5 * base * height * length)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9il7a781.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:15:16.820233,mbpp_14,baseline,4,False,2.439,"def volume_of_triangular_prism(base_area, height):
+    return (1/2) * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp98m7z6ae.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:15:30.810462,mbpp_14,baseline,5,False,1.6409,"def triangular_prism_volume(base_area, height, length):
+    if base_area <= 0 or height <= 0 or length <= 0:
+        return ""Invalid input. All dimensions must be greater than 0.""
+    else:
+        return (base_area * height * length) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmps7c3ac8o.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:15:34.060753,mbpp_14,execution,1,False,3.2458,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpg_p04xlq.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:15:58.324859,mbpp_14,execution,2,False,1.3391,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpswj17ycq.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:16:14.750386,mbpp_14,execution,3,False,1.3476,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1ms039a1.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:16:32.140807,mbpp_14,execution,4,False,1.3727,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9a79mrsm.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:16:48.514765,mbpp_14,execution,5,False,1.3124,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpjoevpzvp.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:16:50.861951,mbpp_14,unit_test,1,False,2.3448,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpfx1ineog.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:17:09.302247,mbpp_14,unit_test,2,False,2.0515,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp98acowg9.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:18:55.287709,mbpp_14,unit_test,3,False,95.172,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2",Execution timed out.,
+2026-08-18T19:19:16.136612,mbpp_14,unit_test,4,False,2.9208,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp4ar1snl5.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:19:35.684166,mbpp_14,unit_test,5,False,2.8337,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmppisb2c9j.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:19:38.035595,mbpp_14,reflection,1,False,2.3476,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpcnvx1q7t.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:20:14.821098,mbpp_14,reflection,2,False,1.3243,"The problem with the previous code was that it was trying to call a function named `find_Volume`, but there was no such function defined in the code. The function `volume_of_triangular_prism` is defined to calculate the volume of a triangular prism, so it should be called with the correct parameters.
+
+Here is the corrected code:
+
+```python
+def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2
+
+# Test the function
+print(volume_of_triangular_prism(10, 8))","  File ""C:\Users\madhu\AppData\Local\Temp\tmpzmcswhao.py"", line 3
+    The problem with the previous code was that it was trying to call a function named `find_Volume`, but there was no such function defined in the code. The function `volume_of_triangular_prism` is defined to calculate the volume of a triangular prism, so it should be called with the correct parameters.
+        ^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T19:21:00.591475,mbpp_14,reflection,3,False,1.3491,"The error is due to an incorrect function name. In your code, you're trying to call a function named `find_Volume` which is not defined. The correct function name to calculate the volume of a triangular prism is `volume_of_triangular_prism`. The corrected code is as follows:
+
+```python
+def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2
+
+# Test the function
+print(volume_of_triangular_prism(10, 8))","  File ""C:\Users\madhu\AppData\Local\Temp\tmp986dhdel.py"", line 3
+    The error is due to an incorrect function name. In your code, you're trying to call a function named `find_Volume` which is not defined. The correct function name to calculate the volume of a triangular prism is `volume_of_triangular_prism`. The corrected code is as follows:
+                                                                     ^
+SyntaxError: unterminated string literal (detected at line 3)
+",
+2026-08-18T19:21:33.673380,mbpp_14,reflection,4,False,1.5684,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2
+
+# Test the function
+print(volume_of_triangular_prism(10, 8))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp_ia25a39.py"", line 14, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","40.0
+TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:22:12.865258,mbpp_14,reflection,5,False,2.8009,"The function `find_Volume` is not defined in the provided Python code. The function `volume_of_triangular_prism` is defined and it seems to be the correct one. You have to use `volume_of_triangular_prism` in place of `find_Volume` while testing the function.
+
+Corrected code:
+
+```python
+def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Error: Both base area and height must be greater than 0.""
+    else:
+        return (base_area * height) / 2
+
+# Test the function
+print(volume_of_triangular_prism(10, 8))","  File ""C:\Users\madhu\AppData\Local\Temp\tmpq7f9iq_p.py"", line 3
+    The function `find_Volume` is not defined in the provided Python code. The function `volume_of_triangular_prism` is defined and it seems to be the correct one. You have to use `volume_of_triangular_prism` in place of `find_Volume` while testing the function.
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T19:42:10.223310,mbpp_11,baseline,1,False,2.9687,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp8y7g3735.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:42:30.976784,mbpp_11,baseline,2,False,1.3105,"def remove_first_last(s: str, ch: str) -> str:
+    if s and ch:
+        s = s.replace(ch, '', 1)
+        if ch in s:
+            s = s[:s.rindex(ch)] + s[s.rindex(ch)+1:]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpax9kkg6f.py"", line 12, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:42:43.506140,mbpp_11,baseline,3,False,3.0001,"def remove_char(s, c):
+    return s[:s.find(c)] + s[s.find(c) + 1:s.rfind(c)] + s[s.rfind(c) + 1:] if c in s else s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpni7qo9r_.py"", line 8, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined. Did you mean: 'remove_char'?
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:42:56.542547,mbpp_11,baseline,4,False,2.5006,"def remove_chars(s, c):
+    s = list(s)
+    if c in s:
+        s.remove(c)
+    if c.upper() in s:
+        s.remove(c.upper())
+    return ''.join(s)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpv8kvwu5m.py"", line 13, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:43:07.099607,mbpp_11,baseline,5,False,1.5369,"def remove_char(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s.replace(c, '', s.rfind(c))
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpjply1imi.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined. Did you mean: 'remove_char'?
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:43:09.903485,mbpp_11,execution,1,False,2.8015,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpg80japk5.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:43:43.586841,mbpp_11,execution,2,False,2.9813,"def remove_first_and_last(s, c):
+    while c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s
+
+assert remove_first_and_last(""hello"",""l"") == ""heo""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp10aow6pm.py"", line 13, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:44:24.769890,mbpp_11,execution,3,False,1.3766,"def remove_first_and_last(s, c):
+    while c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s
+
+assert remove_first_and_last(""hello"",""l"") == ""heo""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmphl737kzy.py"", line 13, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:44:55.548063,mbpp_11,execution,4,False,1.3902,"def remove_first_and_last(s, c):
+    while c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s
+
+assert remove_first_and_last(""hello"",""l"") == ""heo""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp29nf4zga.py"", line 13, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:46:01.831720,mbpp_11,execution,5,False,1.679,"def remove_first_and_last(s, c):
+    while c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpf_0zqarf.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:46:04.119879,mbpp_11,unit_test,1,False,2.285,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp_w1vnayn.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:46:51.149917,mbpp_11,unit_test,2,False,1.7645,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpm0_zx1hv.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:47:22.792554,mbpp_11,unit_test,3,False,1.6915,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9hyybrhu.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:48:01.055476,mbpp_11,unit_test,4,False,3.0657,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzyfdgppb.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:48:16.735236,mbpp_11,unit_test,5,False,3.0245,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp8jztgyxv.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:48:19.114271,mbpp_11,reflection,1,False,2.3681,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpc_15pf77.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:48:58.448125,mbpp_11,reflection,2,False,1.6871,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s
+
+# Test Cases
+assert remove_first_and_last(""hello"",""l"") == ""heo""
+assert remove_first_and_last(""world"",""o"") == ""wrld""
+assert remove_first_and_last(""python"",""z"") == ""python""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpft12by4l.py"", line 16, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:49:59.546822,mbpp_11,reflection,3,False,1.3866,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp4upt2u8u.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:50:32.593768,mbpp_11,reflection,4,False,1.354,"def remove_first_and_last(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s[::-1].replace(c, '', 1)[::-1]
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpp549t4yv.py"", line 11, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:51:30.506229,mbpp_11,reflection,5,False,2.8865,"def remove_first_and_last(s, c):
+    s = s.replace(c, '', 1)
+    s = s[:-1].replace(c, '', 1)
+    return s","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp4odhy3pa.py"", line 10, in <module>
+    assert remove_Occ(""hello"",""l"") == ""heo""
+           ^^^^^^^^^^
+NameError: name 'remove_Occ' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert remove_Occ(""hello"",""l"") == ""heo""
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'remove_Occ' is not defined
+"
+2026-08-18T19:51:42.469609,mbpp_12,baseline,1,True,2.3528,"def sort_matrix(matrix):
+    matrix.sort(key=sum)
+    return matrix",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T19:51:45.315763,mbpp_12,execution,1,True,2.8388,"def sort_matrix(matrix):
+    matrix.sort(key=sum)
+    return matrix",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T19:51:47.690451,mbpp_12,unit_test,1,True,2.3645,"def sort_matrix(matrix):
+    matrix.sort(key=sum)
+    return matrix",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T19:51:50.137535,mbpp_12,reflection,1,True,2.4442,"def sort_matrix(matrix):
+    matrix.sort(key=sum)
+    return matrix",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T19:52:01.662807,mbpp_14,baseline,1,False,3.152,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmprtdwci2o.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:52:43.338669,mbpp_14,baseline,2,False,1.418,"def volume_of_triangular_prism(base_area, height):
+    if isinstance(base_area, (int, float)) and isinstance(height, (int, float)):
+        if base_area > 0 and height > 0:
+            return (1/2) * base_area * height
+        else:
+            return ""Both base area and height must be greater than zero.""
+    else:
+        return ""Both base area and height must be numbers.""","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpr_xsqkee.py"", line 14, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:52:54.693199,mbpp_14,baseline,3,False,1.4045,"def volume_of_triangular_prism(base_area, base_edge, height):
+    # calculate the volume of a triangular prism
+    volume = (1/2) * base_area * base_edge * height
+    return volume","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp2fr14q1m.py"", line 10, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:53:06.447500,mbpp_14,baseline,4,False,3.26,"def volume_of_triangular_prism(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmprr5lvged.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:53:17.345013,mbpp_14,baseline,5,False,2.1498,"def volume_of_triangular_prism(base, height, length):
+    return (1/2) * base * height * length","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpbzxjyis4.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:53:20.718646,mbpp_14,execution,1,False,3.3682,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmptx_jtuvx.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:53:58.845931,mbpp_14,execution,2,False,1.9595,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpt_bkqivn.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:54:25.698315,mbpp_14,execution,3,False,3.0035,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpcg7_rnaa.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:55:02.180192,mbpp_14,execution,4,False,1.7701,"volume = triangular_prism_volume(10, 8)  # where 10 is the base area and 8 is the height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp8inprv0b.py"", line 3, in <module>
+    volume = triangular_prism_volume(10, 8)  # where 10 is the base area and 8 is the height
+             ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'triangular_prism_volume' is not defined
+",
+2026-08-18T19:55:39.817864,mbpp_14,execution,5,False,1.7308,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpnr02i8eb.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:55:43.065895,mbpp_14,unit_test,1,False,3.2453,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp_h993dbk.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:56:05.423180,mbpp_14,unit_test,2,False,3.0336,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpsq2eq2nr.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:56:25.729647,mbpp_14,unit_test,3,False,1.5446,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpwlukrcho.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:56:33.297135,mbpp_14,unit_test,4,False,2.7004,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpgac_kvo_.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:56:40.581320,mbpp_14,unit_test,5,False,1.495,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpa2qtj9v7.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:56:42.838463,mbpp_14,reflection,1,False,2.2548,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpqmaqji3x.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:57:27.897851,mbpp_14,reflection,2,False,1.4746,"def triangular_prism_volume(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpptqhpgmb.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:58:05.584531,mbpp_14,reflection,3,False,2.2811,"def triangular_prism_volume(base_area, height, length):
+    return 0.5 * base_area * height * length","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9g8ywgqg.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:58:55.650918,mbpp_14,reflection,4,False,3.3938,"def triangular_prism_volume(base_area, height, length):
+    return 0.5 * base_area * height * length","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpfhqvk6lk.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T19:59:18.579210,mbpp_14,reflection,5,False,1.567,"def triangular_prism_volume(base_area, height, length):
+    return 0.5 * base_area * height * length","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpbjp6hy58.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+","TEST 1: ERROR
+FAILED TEST: assert find_Volume(10,8,6) == 240
+ERROR TYPE: NameError
+ERROR MESSAGE: name 'find_Volume' is not defined
+"
+2026-08-18T20:21:46.845449,mbpp_11,baseline,1,True,3.0604,"def remove_Occ(s, ch):
+    s = list(s)
+    if ch in s:
+        s.remove(ch)
+        s.remove(ch)
+    return ''.join(s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:21:49.161903,mbpp_11,execution,1,True,2.3081,"def remove_Occ(s, ch):
+    s = list(s)
+    if ch in s:
+        s.remove(ch)
+        s.remove(ch)
+    return ''.join(s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:21:54.568302,mbpp_11,unit_test,1,True,5.3986,"def remove_Occ(s, ch):
+    s = list(s)
+    if ch in s:
+        s.remove(ch)
+        s.remove(ch)
+    return ''.join(s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:21:56.901179,mbpp_11,reflection,1,True,2.329,"def remove_Occ(s, ch):
+    s = list(s)
+    if ch in s:
+        s.remove(ch)
+        s.remove(ch)
+    return ''.join(s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:18.564722,mbpp_12,baseline,1,True,3.8751,"def sort_matrix(m):
+    return sorted(m, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:21.396848,mbpp_12,execution,1,True,2.8284,"def sort_matrix(m):
+    return sorted(m, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:24.554209,mbpp_12,unit_test,1,True,3.152,"def sort_matrix(m):
+    return sorted(m, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:26.933854,mbpp_12,reflection,1,True,2.3703,"def sort_matrix(m):
+    return sorted(m, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:44.156579,mbpp_14,baseline,1,True,3.4885,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:46.513784,mbpp_14,execution,1,True,2.3542,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:48.502987,mbpp_14,unit_test,1,True,1.9859,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:22:50.620526,mbpp_14,reflection,1,True,2.1144,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:18.992417,mbpp_11,baseline,1,True,3.6323,"def remove_Occ(s, ch):
+    s = s.replace(ch, '', 1)
+    s = s[::-1].replace(ch, '', 1)[::-1]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:21.342902,mbpp_11,execution,1,True,2.343,"def remove_Occ(s, ch):
+    s = s.replace(ch, '', 1)
+    s = s[::-1].replace(ch, '', 1)[::-1]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:25.849275,mbpp_11,unit_test,1,True,4.4922,"def remove_Occ(s, ch):
+    s = s.replace(ch, '', 1)
+    s = s[::-1].replace(ch, '', 1)[::-1]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:29.275714,mbpp_11,reflection,1,True,3.4204,"def remove_Occ(s, ch):
+    s = s.replace(ch, '', 1)
+    s = s[::-1].replace(ch, '', 1)[::-1]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:48.313894,mbpp_12,baseline,1,True,3.6946,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:50.783947,mbpp_12,execution,1,True,2.4643,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:52.980427,mbpp_12,unit_test,1,True,2.1902,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:35:55.147906,mbpp_12,reflection,1,True,2.1643,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:36:10.032936,mbpp_14,baseline,1,True,1.7955,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:36:12.332901,mbpp_14,execution,1,True,2.2963,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:36:17.292015,mbpp_14,unit_test,1,True,4.955,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T20:36:19.747953,mbpp_14,reflection,1,True,2.4515,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:16.618880,20260820_104337,mbpp_11,baseline,1,True,0.2063,"def remove_Occ(s, c):
+    return s[:s.find(c)] + s[s.find(c)+1:s.rfind(c)] + s[s.rfind(c)+1:]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:16.743573,20260820_104337,mbpp_11,execution,1,True,0.117,"def remove_Occ(s, c):
+    return s[:s.find(c)] + s[s.find(c)+1:s.rfind(c)] + s[s.rfind(c)+1:]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:16.861960,20260820_104337,mbpp_11,unit_test,1,True,0.1115,"def remove_Occ(s, c):
+    return s[:s.find(c)] + s[s.find(c)+1:s.rfind(c)] + s[s.rfind(c)+1:]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:17.027177,20260820_104337,mbpp_11,reflection,1,True,0.161,"def remove_Occ(s, c):
+    return s[:s.find(c)] + s[s.find(c)+1:s.rfind(c)] + s[s.rfind(c)+1:]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:33.865617,20260820_104337,mbpp_12,baseline,1,True,0.1438,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:33.967246,20260820_104337,mbpp_12,execution,1,True,0.0974,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:34.059008,20260820_104337,mbpp_12,unit_test,1,True,0.088,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:34.162733,20260820_104337,mbpp_12,reflection,1,True,0.1005,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:47.907516,20260820_104337,mbpp_14,baseline,1,True,0.1104,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:48.013756,20260820_104337,mbpp_14,execution,1,True,0.1015,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:48.102176,20260820_104337,mbpp_14,unit_test,1,True,0.0844,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-20T10:44:48.177670,20260820_104337,mbpp_14,reflection,1,True,0.0717,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"

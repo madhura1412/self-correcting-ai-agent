@@ -1,0 +1,1025 @@
+{
+  "problems": {
+    "3000": {
+      "initial_code": "import sys\n\nMOD = 10**9 + 7\n\ndef solve(n, s):\n    stack = []\n    for i in range(n):\n        if s[i] == ')':\n            temp = 0\n            while stack[-1] != '(':\n                temp += stack.pop()\n                stack.pop()\n            stack.pop()\n            if not stack or stack[-1] == '(':\n                stack.append(temp)\n            else:\n                stack[-1] += temp\n        elif s[i] != '(':\n            stack.append(int(s[i]))\n        else:\n            stack.append(s[i])\n    return sum(stack) % MOD\n\ndef main():\n    n = int(sys.stdin.readline().strip())\n    s = sys.stdin.readline().strip().split()\n    print(solve(n, s))\n\nif __name__ == \"__main__\":\n    main()",
+      "initial_result": {
+        "problem_id": 3000,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 6,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "5\n",
+            "actual": "5\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "9\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 30, in <module>\n  File \"<string>\", line 27, in main\n  File \"<string>\", line 10, in solve\nIndexError: list index out of range\n"
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "36\n",
+            "actual": "3\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "5\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 30, in <module>\n  File \"<string>\", line 27, in main\n  File \"<string>\", line 10, in solve\nIndexError: list index out of range\n"
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "5\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 30, in <module>\n  File \"<string>\", line 27, in main\n  File \"<string>\", line 10, in solve\nIndexError: list index out of range\n"
+          },
+          {
+            "test": 6,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "1\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 30, in <module>\n  File \"<string>\", line 27, in main\n  File \"<string>\", line 12, in solve\nIndexError: pop from empty list\n"
+          }
+        ]
+      }
+    },
+    "3001": {
+      "initial_code": "def min_steps(s):\n    n = len(s)\n    s = '0' + s + '0'\n    dp = [[0]*n for _ in range(n)]\n    for length in range(2, n+1):\n        for i in range(n-length+1):\n            j = i+length-1\n            if s[i+1:j] == s[i+1:j][::-1]:\n                dp[i][j] = min(dp[i][k]+dp[k+1][j]+1 for k in range(i, j))\n            else:\n                dp[i][j] = min(dp[i][k]+dp[k+1][j] for k in range(i, j))\n    return dp[0][n-1]\n\nprint(min_steps(input()))",
+      "initial_result": {
+        "problem_id": 3001,
+        "passed": false,
+        "passed_tests": 3,
+        "total_tests": 6,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "0\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": true,
+            "status": "ok",
+            "expected": "3\n",
+            "actual": "3\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "5\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "4\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": true,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 6,
+            "passed": false,
+            "status": "ok",
+            "expected": "54\n",
+            "actual": "2\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3002": {
+      "initial_code": "def check_odometer():\n    e = int(input())\n    entries = []\n    for _ in range(e):\n        y, m, o = map(int, input().split())\n        entries.append((y, m, o))\n\n    entries.sort()\n\n    last_service_year, last_service_month = entries[0][0], entries[0][1]\n    total_distance = 0\n    for i in range(1, len(entries)):\n        year, month, distance = entries[i]\n        if year == last_service_year and month == last_service_month:\n            print(\"tampered odometer\")\n            return\n        total_distance += distance\n        if total_distance >= 30000:\n            total_distance = 0\n        last_service_year, last_service_month = year, month\n\n    if total_distance > 0:\n        print(\"insufficient service\")\n    else:\n        print(\"seems legit\")\n\ncheck_odometer()",
+      "initial_result": {
+        "problem_id": 3002,
+        "passed": false,
+        "passed_tests": 3,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "seems legit\n",
+            "actual": "seems legit\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "insufficient service\n",
+            "actual": "seems legit\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "tampered odometer\n",
+            "actual": "insufficient service\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": true,
+            "status": "ok",
+            "expected": "seems legit\n",
+            "actual": "seems legit\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": true,
+            "status": "ok",
+            "expected": "insufficient service\n",
+            "actual": "insufficient service\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3003": {
+      "initial_code": "from collections import defaultdict\n\ndef min_colors(graph):\n    color = {}\n    for node in sorted(graph, key=lambda x: len(graph[x])):\n        colors = set(range(len(graph)))\n        for i in graph[node]:\n            if i in color:\n                colors.discard(color[i])\n        color[node] = colors.pop()\n    return max(color.values) + 1\n\ndef main():\n    n = int(input().strip())\n    graph = defaultdict(set)\n    for i in range(n):\n        line = list(map(int, input().strip().split()))\n        for j in line[1:]:\n            graph[i].add(j)\n            graph[j].add(i)\n    print(min_colors(graph))\n\nif __name__ == \"__main__\":\n    main()",
+      "initial_result": {
+        "problem_id": 3003,
+        "passed": false,
+        "passed_tests": 0,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "3\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"<string>\", line 21, in main\n  File \"<string>\", line 11, in min_colors\nTypeError: 'builtin_function_or_method' object is not iterable\n"
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "2\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"<string>\", line 21, in main\n  File \"<string>\", line 11, in min_colors\nTypeError: 'builtin_function_or_method' object is not iterable\n"
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "2\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"<string>\", line 21, in main\n  File \"<string>\", line 11, in min_colors\nTypeError: 'builtin_function_or_method' object is not iterable\n"
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "4\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"<string>\", line 21, in main\n  File \"<string>\", line 11, in min_colors\nTypeError: 'builtin_function_or_method' object is not iterable\n"
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "3\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"<string>\", line 21, in main\n  File \"<string>\", line 11, in min_colors\nTypeError: 'builtin_function_or_method' object is not iterable\n"
+          }
+        ]
+      }
+    },
+    "3004": {
+      "initial_code": "import sys\n\ndef solve():\n    N = int(sys.stdin.readline())\n    offers = []\n    for _ in range(N):\n        C, A, B = sys.stdin.readline().split()\n        offers.append((int(A), int(B), C))\n    offers.sort()\n\n    dp = [[[0]*10001 for _ in range(4)] for _ in range(3)]\n    dp[0][0][0] = 1\n\n    for i in range(N):\n        for j in range(3):\n            for k in range(10001):\n                if dp[i%3][j][k]:\n                    dp[(i+1)%3][j][k] = 1\n                    if k < offers[i][0]:\n                        dp[(i+1)%3][j+1][offers[i][1]] = 1\n                    elif k == offers[i][0]:\n                        dp[(i+1)%3][j+1][offers[i][1]] = 1\n                    elif k > offers[i][1]:\n                        dp[(i+1)%3][j][k] = 1\n\n    for i in range(3):\n        for j in range(4):\n            if dp[N%3][j][10000]:\n                return N - i\n    return \"IMPOSSIBLE\"\n\nprint(solve())",
+      "initial_result": {
+        "problem_id": 3004,
+        "passed": false,
+        "passed_tests": 2,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": true,
+            "status": "ok",
+            "expected": "3\n",
+            "actual": "3\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "IMPOSSIBLE\n",
+            "actual": "4\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "IMPOSSIBLE\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "3\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3005": {
+      "initial_code": "def max_factoring_weight(s):\n    n = len(s)\n    dp = [[0]*n for _ in range(n)]\n    for length in range(2, n+1):\n        for i in range(n-length+1):\n            j = i+length-1\n            if length == 2:\n                dp[i][j] = 1\n            else:\n                dp[i][j] = min(dp[i][k] + dp[k+1][j] for k in range(i, j))\n            if s[i:j] == s[i:j+1]:\n                dp[i][j] = min(dp[i][j], dp[i][j//2]+1)\n    return dp[0][n-1]\n\nif __name__ == \"__main__\":\n    s = input()\n    print(max_factoring_weight(s))",
+      "initial_result": {
+        "problem_id": 3005,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "6\n",
+            "actual": "1\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": true,
+            "status": "ok",
+            "expected": "1\n",
+            "actual": "1\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "5\n",
+            "actual": "1\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "6\n",
+            "actual": "1\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "ok",
+            "expected": "5\n",
+            "actual": "1\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3006": {
+      "initial_code": "def process_input(input_string):\n    operations = []\n    for line in input_string.split('\\n'):\n        if line.startswith('D'):\n            operations.append(('D', int(line.split()[1])))\n        elif line.startswith('I'):\n            operations.append(('I', int(line.split()[1]), line.split()[2]))\n        elif line.startswith('E'):\n            return operations\n\ndef compare_programs(program1, program2):\n    operations1 = process_input(program1)\n    operations2 = process_input(program2)\n\n    if len(operations1) != len(operations2):\n        return 1\n\n    for op1, op2 in zip(operations1, operations2):\n        if op1[0] != op2[0]:\n            return 1\n        if op1[0] == 'D':\n            if op1[1] != op2[1]:\n                return 1\n        elif op1[0] == 'I':\n            if op1[1] != op2[1] or op1[2] != op2[2]:\n                return 1\n\n    return 0\n\nprogram1 = input().strip()\nprogram2 = input().strip()\n\nprint(compare_programs(program1, program2))",
+      "initial_result": {
+        "problem_id": 3006,
+        "passed": false,
+        "passed_tests": 0,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "0\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 33, in <module>\n  File \"<string>\", line 15, in compare_programs\nTypeError: object of type 'NoneType' has no len()\n"
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "1\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 33, in <module>\n  File \"<string>\", line 15, in compare_programs\nTypeError: object of type 'NoneType' has no len()\n"
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "0\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 33, in <module>\n  File \"<string>\", line 15, in compare_programs\nTypeError: object of type 'NoneType' has no len()\n"
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "0\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 33, in <module>\n  File \"<string>\", line 15, in compare_programs\nTypeError: object of type 'NoneType' has no len()\n"
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "1\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 33, in <module>\n  File \"<string>\", line 15, in compare_programs\nTypeError: object of type 'NoneType' has no len()\n"
+          }
+        ]
+      }
+    },
+    "3007": {
+      "initial_code": "def max_bling():\n    d, b, f, t0, t1, t2 = map(int, input().split())\n    total_fruits = f + t0*3 + t1*6 + t2*9\n    bling = b\n    for _ in range(d):\n        if total_fruits >= 10:\n            bling += 100\n            total_fruits -= 10\n        elif total_fruits >= 3:\n            bling += 500\n            total_fruits -= 3\n        else:\n            break\n    return bling\n\nprint(max_bling())",
+      "initial_result": {
+        "problem_id": 3007,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "300\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "1900\n",
+            "actual": "1000\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "2300\n",
+            "actual": "500\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": true,
+            "status": "ok",
+            "expected": "399\n",
+            "actual": "399\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "ok",
+            "expected": "500\n",
+            "actual": "400\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3008": {
+      "initial_code": "import sys\nfrom bisect import bisect_right\n\ndef read_input():\n    n, k = map(int, sys.stdin.readline().split())\n    a = list(map(int, sys.stdin.readline().split()))\n    b = list(map(int, sys.stdin.readline().split()))\n    return n, k, a, b\n\ndef solve(n, k, a, b):\n    assistants = sorted(zip(a, b))\n    dp = []\n    for i in range(n):\n        idx = bisect_right(dp, assistants[i][1] + k)\n        if idx == len(dp):\n            dp.append(assistants[i][1])\n        else:\n            dp[idx] = assistants[i][1]\n    return len(dp)\n\ndef main():\n    n, k, a, b = read_input()\n    print(solve(n, k, a, b))\n\nif __name__ == \"__main__\":\n    main()",
+      "initial_result": {
+        "problem_id": 3008,
+        "passed": true,
+        "passed_tests": 5,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": true,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": true,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": true,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": true,
+            "status": "ok",
+            "expected": "1\n",
+            "actual": "1\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3009": {
+      "initial_code": "import sys\nfrom math import sqrt\n\ndef dist(x1, y1, x2, y2):\n    return sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)\n\ndef intersection(x1, y1, x2, y2, x3, y3, x4, y4):\n    p = x1 * y2 - y1 * x2\n    q = x3 * y4 - y3 * x4\n    r = x1 * y4 - y1 * x4\n    s = x3 * y2 - y3 * x2\n\n    if (x2 - x1) * (y3 - y1) == (y2 - y1) * (x3 - x1):\n        return None\n\n    t = (p * (x3 - x4) - (x1 - x2) * q) / ((x2 - x1) * (y3 - y4) - (y2 - y1) * (x3 - x4))\n    u = -((x1 - x2) * r + p * (x3 - x1)) / ((x2 - x1) * (y3 - y4) - (y2 - y1) * (x3 - x4))\n\n    if t < 0 or t > 1 or u < 0 or u > 1:\n        return None\n\n    x = x1 + t * (x2 - x1)\n    y = y1 + t * (y2 - y1)\n\n    return (x, y)\n\ndef main():\n    n = int(sys.stdin.readline())\n    lamps = []\n    for _ in range(n):\n        x, y, e = map(int, sys.stdin.readline().split())\n        lamps.append((x, y, e))\n\n    min_dist = float('inf')\n    for i in range(n):\n        for j in range(i + 1, n):\n            x1, y1, e1 = lamps[i]\n            x2, y2, e2 = lamps[j]\n            if e1 * e2 < 0:\n                p = intersection(x1, y1, x1 + 1, y1, x2, y2, x2 + 1, y2)\n                if p is not None:\n                    min_dist = min(min_dist, dist(*p, x1, y1) + dist(x2, y2, *p))\n\n    if min_dist == float('inf'):\n        print('IMPOSSIBLE')\n    else:\n        print('{:.7f}'.format(min_dist))\n\nif __name__ == '__main__':\n    main()",
+      "initial_result": {
+        "problem_id": 3009,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "28\n",
+            "actual": "IMPOSSIBLE\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "36.2842712475\n",
+            "actual": "IMPOSSIBLE\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "28.970562748\n",
+            "actual": "IMPOSSIBLE\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "32\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 50, in <module>\n  File \"<string>\", line 40, in main\n  File \"<string>\", line 16, in intersection\nZeroDivisionError: division by zero\n"
+          },
+          {
+            "test": 5,
+            "passed": true,
+            "status": "ok",
+            "expected": "IMPOSSIBLE\n",
+            "actual": "IMPOSSIBLE\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3010": {
+      "initial_code": "from collections import defaultdict\n\ndef solve():\n    n = int(input().strip())\n    lines = [list(map(int, input().strip().split())) for _ in range(n)]\n\n    points = defaultdict(int)\n    for line in lines:\n        x1, y1, x2, y2 = line\n        if x1 == x2:\n            for y in range(min(y1, y2), max(y1, y2) + 1):\n                points[(x1, y)] += 1\n        else:\n            for x in range(min(x1, x2), max(x1, x2) + 1):\n                points[(x, y1)] += 1\n\n    intersection_points = [point for point, count in points.items() if count > 1]\n    if len(intersection_points) == 0:\n        print(-1)\n    else:\n        print(len(intersection_points))\n\nif __name__ == \"__main__\":\n    solve()",
+      "initial_result": {
+        "problem_id": 3010,
+        "passed": false,
+        "passed_tests": 2,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "3\n",
+            "actual": "-1\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "1\n",
+            "actual": "4\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "1\n",
+            "actual": "2\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": true,
+            "status": "ok",
+            "expected": "1\n",
+            "actual": "1\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": true,
+            "status": "ok",
+            "expected": "-1\n",
+            "actual": "-1\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3011": {
+      "initial_code": "def count_hill_numbers(n):\n    if n < 10:\n        return n\n    n_str = str(n)\n    length = len(n_str)\n    dp = [[0]*length for _ in range(length)]\n    dp[0][0] = 1\n    for i in range(1, length):\n        dp[i][i] = dp[i-1][i-1]*10\n        for j in range(i-1, -1, -1):\n            dp[j][i] = dp[j][i-1] + dp[j+1][i]\n            if n_str[j] == n_str[j+1]:\n                dp[j][i] += dp[j+1][i-1] + 1\n            elif n_str[j] < n_str[j+1]:\n                dp[j][i] += dp[j+1][i-1]\n            else:\n                dp[j][i] = dp[j+1][i]\n    return dp[0][length-1]\n\nn = int(input().strip())\nn_str = str(n)\nis_hill = all(n_str[i] <= n_str[i+1] for i in range(len(n_str)-1))\nprint(count_hill_numbers(n) if is_hill else -1)",
+      "initial_result": {
+        "problem_id": 3011,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "10\n",
+            "actual": "-1\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "55\n",
+            "actual": "12\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": true,
+            "status": "ok",
+            "expected": "-1\n",
+            "actual": "-1\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "94708\n",
+            "actual": "-1\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "ok",
+            "expected": "715\n",
+            "actual": "-1\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3012": {
+      "initial_code": "MOD = 10**9 + 7\n\ndef solve(a11, a12, a21, a22, N):\n    dp = [[[0, 0, 0] for _ in range(3)] for _ in range(N+1)]\n    dp[0][0][0] = 1\n    for i in range(N):\n        for j in range(3):\n            for k in range(3):\n                if j != k:\n                    dp[i+1][j][k] = (dp[i+1][j][k] + dp[i][j][k]) % MOD\n                if j != (k+1)%3:\n                    dp[i+1][j][(k+1)%3] = (dp[i+1][j][(k+1)%3] + dp[i][j][k]) % MOD\n                if (j+1)%3 != k:\n                    dp[i+1][(j+1)%3][k] = (dp[i+1][(j+1)%3][k] + dp[i][j][k]) % MOD\n                if (j+1)%3 != (k+1)%3:\n                    dp[(i+1)][(j+1)%3][(k+1)%3] = (dp[(i+1)][(j+1)%3][(k+1)%3] + dp[i][j][k]) % MOD\n    res = 0\n    for j in range(3):\n        for k in range(3):\n            if a11 and a22:\n                res = (res + dp[N][j][k]) % MOD\n            elif a11:\n                if j == 0:\n                    res = (res + dp[N][j][k]) % MOD\n            elif a22:\n                if k == 0:\n                    res = (res + dp[N][j][k]) % MOD\n    return res\n\na11, a12, a21, a22, N = map(int, input().split())\nprint(solve(a11, a12, a21, a22, N))",
+      "initial_result": {
+        "problem_id": 3012,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "6\n",
+            "actual": "6\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "2\n",
+            "actual": "54\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "4\n",
+            "actual": "18\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "0\n",
+            "actual": "162\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "460130848\n",
+            "actual": "",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3013": {
+      "initial_code": "import math\n\ndef solve():\n    b, tx, ty = map(float, input().split())\n    tx, ty = -tx, -ty\n    r = math.sqrt(tx**2 + ty**2)\n    phi = math.atan2(ty, tx)\n    if phi < 0:\n        phi += 2 * math.pi\n    x = r * math.cos(phi)\n    y = r * math.sin(phi)\n    print(f\"{x:.9f} {y:.9f}\")\n\nsolve()",
+      "initial_result": {
+        "problem_id": 3013,
+        "passed": false,
+        "passed_tests": 0,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "-1.26167861 3.88425357\n",
+            "actual": "5.301000000 -3.098000000\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "9.21068947 2.56226688\n",
+            "actual": "-8.000000000 -8.000000000\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "6.22375968 -0.31921472\n",
+            "actual": "-8.000000000 -8.000000000\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "-4.36385220 9.46891588\n",
+            "actual": "8.000000000 -8.000000000\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "ok",
+            "expected": "-3.60855706 -3.61140618\n",
+            "actual": "0.000000000 8.000000000\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3014": {
+      "initial_code": "import sys\nsys.setrecursionlimit(10**6)\n\ndef dfs(v, p):\n    visited[v] = True\n    for u in adj[v]:\n        if u == p: continue\n        if visited[u]: return True\n        if dfs(u, v): return True\n    return False\n\nn, m = map(int, input().split())\nadj = [[] for _ in range(n+1)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n    adj[u].append(v)\n    adj[v].append(u)\n\nvisited = [False] * (n+1)\nhas_cycle = False\nfor v in range(1, n+1):\n    if not visited[v] and dfs(v, -1):\n        has_cycle = True\n        break\n\nif has_cycle:\n    print(0)\nelse:\n    print(1)",
+      "initial_result": {
+        "problem_id": 3014,
+        "passed": false,
+        "passed_tests": 1,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "1\n2\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "1\n1\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": true,
+            "status": "ok",
+            "expected": "0\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "2\n4\n5\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "ok",
+            "expected": "1\n2\n",
+            "actual": "1\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3015": {
+      "initial_code": "import heapq\n\ndef dijkstra(graph, start, end):\n    shortest_distances = {node: float('infinity') for node in graph}\n    shortest_distances[start] = 0\n    heap = [(0, start)]\n    while heap:\n        dist, current = heapq.heappop(heap)\n        if current == end:\n            return shortest_distances[end]\n        if shortest",
+      "initial_result": {
+        "problem_id": 3015,
+        "passed": false,
+        "passed_tests": 0,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "11\n",
+            "actual": "",
+            "stderr": "  File \"<string>\", line 11\n    if shortest\n               ^\nSyntaxError: expected ':'\n"
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "infinity\n",
+            "actual": "",
+            "stderr": "  File \"<string>\", line 11\n    if shortest\n               ^\nSyntaxError: expected ':'\n"
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "2\n",
+            "actual": "",
+            "stderr": "  File \"<string>\", line 11\n    if shortest\n               ^\nSyntaxError: expected ':'\n"
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "infinity\n",
+            "actual": "",
+            "stderr": "  File \"<string>\", line 11\n    if shortest\n               ^\nSyntaxError: expected ':'\n"
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "infinity\n",
+            "actual": "",
+            "stderr": "  File \"<string>\", line 11\n    if shortest\n               ^\nSyntaxError: expected ':'\n"
+          }
+        ]
+      }
+    },
+    "3016": {
+      "initial_code": "import sys\n\nMOD = 10**9 + 7\n\ndef solve(n, a, b, c):\n    dp = [[0]*82 for _ in range(82)]\n    dp[0][0] = 1\n    for i in range(1, n+1):\n        dp[i] = dp[i-1][:]\n        for j in range(i*2, -1, -1):\n            for k in range(min(i, j)+1):\n                dp[i][j] = (dp[i][j] + dp[i-1][j-k] * a[i-1] * pow(b[i-1], k, MOD)) % MOD\n    return sum(dp[n][i] for i in c) % MOD\n\ndef main():\n    n = int(sys.stdin.readline())\n    a = list(map(int, sys.stdin.readline().split()))\n    b = list(map(int, sys.stdin.readline().split()))\n    c = list(map(int, sys.stdin.readline().split()))\n    print(solve(n, a, b, c))\n\nif __name__ == \"__main__\":\n    main()",
+      "initial_result": {
+        "problem_id": 3016,
+        "passed": false,
+        "passed_tests": 0,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "6\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 23, in <module>\n  File \"<string>\", line 16, in main\nValueError: invalid literal for int() with base 10: '4 2 1 2 1\\n'\n"
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "0\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 23, in <module>\n  File \"<string>\", line 16, in main\nValueError: invalid literal for int() with base 10: '3 3 1 1\\n'\n"
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "18\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 23, in <module>\n  File \"<string>\", line 16, in main\nValueError: invalid literal for int() with base 10: '3 2 2 3\\n'\n"
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "12\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 23, in <module>\n  File \"<string>\", line 16, in main\nValueError: invalid literal for int() with base 10: '3 1 2 3\\n'\n"
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "runtime_error",
+            "expected": "0\n",
+            "actual": "",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 23, in <module>\n  File \"<string>\", line 16, in main\nValueError: invalid literal for int() with base 10: '3 1 4 1\\n'\n"
+          }
+        ]
+      }
+    },
+    "3017": {
+      "initial_code": "def count_numbers(n, e):\n    count = 0\n    for i in range(1, n+1):\n        if str(2**e) in str(i):\n            count += 1\n    return count\n\nn, e = map(int, input().split())\nprint(count_numbers(n, e))",
+      "initial_result": {
+        "problem_id": 3017,
+        "passed": false,
+        "passed_tests": 3,
+        "total_tests": 5,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "468559\n",
+            "actual": "468559\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": true,
+            "status": "ok",
+            "expected": "49401\n",
+            "actual": "49401\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": true,
+            "status": "ok",
+            "expected": "20\n",
+            "actual": "20\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "timeout",
+            "expected": "1\n",
+            "actual": "",
+            "stderr": "Container exceeded wall-clock limit"
+          },
+          {
+            "test": 5,
+            "passed": false,
+            "status": "timeout",
+            "expected": "4842258985\n",
+            "actual": "",
+            "stderr": "Container exceeded wall-clock limit"
+          }
+        ]
+      }
+    },
+    "3018": {
+      "initial_code": "from collections import defaultdict\n\ndef solve():\n    K, T = map(int, input().split())\n    rolls = list(map(int, input().split()))\n\n    dp = [0] * (T + 1)\n    dp[0] = 1\n    for roll in rolls:\n        for i in range(T, roll - 1, -1):\n            dp[i] = max(dp[i], dp[i - roll] * (K if i - roll >= roll else i - roll))\n\n    return T - dp[T:].index(max(dp[T:]))\n\nprint(solve())",
+      "initial_result": {
+        "problem_id": 3018,
+        "passed": false,
+        "passed_tests": 0,
+        "total_tests": 4,
+        "tests": [
+          {
+            "test": 1,
+            "passed": false,
+            "status": "ok",
+            "expected": "1\n",
+            "actual": "9\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": false,
+            "status": "ok",
+            "expected": "3\n",
+            "actual": "13\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": false,
+            "status": "ok",
+            "expected": "12\n",
+            "actual": "90\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "0\n",
+            "actual": "21\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    "3019": {
+      "initial_code": "import sys\nfrom collections import Counter\n\ndef prime_factors(n):\n    i = 2\n    factors = []\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            factors.append(i)\n    if n > 1:\n        factors.append(n)\n    return set(factors)\n\ndef max_revenue():\n    n = int(sys.stdin.readline().strip())\n    s = list(map(int, sys.stdin.readline().strip().split()))\n    total_revenue = 0\n    for i in range(n):\n        total_revenue += len(prime_factors(s[i]))\n    return total_revenue\n\nprint(max_revenue())",
+      "initial_result": {
+        "problem_id": 3019,
+        "passed": false,
+        "passed_tests": 3,
+        "total_tests": 4,
+        "tests": [
+          {
+            "test": 1,
+            "passed": true,
+            "status": "ok",
+            "expected": "0\n",
+            "actual": "0\n",
+            "stderr": ""
+          },
+          {
+            "test": 2,
+            "passed": true,
+            "status": "ok",
+            "expected": "3\n",
+            "actual": "3\n",
+            "stderr": ""
+          },
+          {
+            "test": 3,
+            "passed": true,
+            "status": "ok",
+            "expected": "5\n",
+            "actual": "5\n",
+            "stderr": ""
+          },
+          {
+            "test": 4,
+            "passed": false,
+            "status": "ok",
+            "expected": "12\n",
+            "actual": "11\n",
+            "stderr": ""
+          }
+        ]
+      }
+    }
+  },
+  "completed": []
+}

@@ -1,0 +1,13 @@
+timestamp,run_id,problem_id,feedback_strategy,attempt,attempt_type,success,execution_time,code,error,test_feedback
+2026-10-27T17:15:17.695714,mbpp95_reflection_20261027_171416,mbpp_95,improved_reflection,1,correction,False,0.7391893863677979,"def find_min_length(lst):
+    return min(len(sub_lst) for sub_lst in lst)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn9jzx65n.py"", line 8, in <module>
+    assert Find_Min_Length([[1],[1,2]]) == 1
+           ^^^^^^^^^^^^^^^
+NameError: name 'Find_Min_Length' is not defined. Did you mean: 'find_min_length'?
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmptag9ucuv.py"", line 8, in <module>
+    assert Find_Min_Length([[1],[1,2]]) == 1
+           ^^^^^^^^^^^^^^^
+NameError: name 'Find_Min_Length' is not defined. Did you mean: 'find_min_length'?
+"

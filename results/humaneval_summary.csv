@@ -1,0 +1,5 @@
+Strategy,Problems,Pass@1 (%),Final success (%),Initial failures,Recovered,Recovery rate (%),Average attempts
+baseline,164,70.12,84.15,49,23,46.94,1.84
+execution,164,70.12,80.49,49,17,34.69,1.99
+reflection,164,70.12,81.1,49,18,36.73,1.99
+unit_test,164,70.12,79.88,49,16,32.65,2.01

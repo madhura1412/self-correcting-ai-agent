@@ -1,0 +1,248 @@
+timestamp,run_id,problem_id,feedback_strategy,attempt,attempt_type,success,execution_time,code,error,test_feedback
+2026-10-27T23:43:05.378240,improved_reflection_test_20261027_234301,mbpp_20,improved_reflection,1,correction,False,1.66444993019104,"def is_woodall(n):
+    def digits_product(x):
+        product = 1
+        for digit in str(x):
+            product *= int(digit)
+        return product
+
+    previous = []
+    while n not in previous:
+        previous.append(n)
+        n = digits_product(n)
+
+    return n == 1","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp21gevbi4.py"", line 19, in <module>
+    assert is_woodall(383) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp21gevbi4.py"", line 19, in <module>
+    assert is_woodall(383) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:44:24.786106,improved_reflection_test_20261027_234301,mbpp_20,improved_reflection,2,correction,False,0.7214643955230713,"def is_woodall(n):
+    def digits_product(x):
+        product = 1
+        for digit in str(x):
+            product *= int(digit)
+        return product
+
+    previous = set()
+    while n not in previous:
+        previous.add(n)
+        n = digitsproduct(n)
+        if n == 1:
+            return True
+
+    return False","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp0tmhdkyq.py"", line 21, in <module>
+    assert is_woodall(383) == True
+           ~~~~~~~~~~^^^^^
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp0tmhdkyq.py"", line 13, in is_woodall
+    n = digitsproduct(n)
+        ^^^^^^^^^^^^^
+NameError: name 'digitsproduct' is not defined. Did you mean: 'digits_product'?
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp0tmhdkyq.py"", line 21, in <module>
+    assert is_woodall(383) == True
+           ~~~~~~~~~~^^^^^
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp0tmhdkyq.py"", line 13, in is_woodall
+    n = digitsproduct(n)
+        ^^^^^^^^^^^^^
+NameError: name 'digitsproduct' is not defined. Did you mean: 'digits_product'?
+"
+2026-10-27T23:45:33.163156,improved_reflection_test_20261027_234301,mbpp_20,improved_reflection,3,correction,False,0.7647721767425537,"def is_woodall(n):
+    def digits_product(x):
+        product = 1
+        for digit in str(x):
+            product *= int(digit)
+        return product
+
+    previous = set()
+    while n not in previous:
+        previous.add(n)
+        n = digits_product(n)
+        if n == 1:
+            return True
+
+    return False","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp69uq01mk.py"", line 21, in <module>
+    assert is_woodall(383) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp69uq01mk.py"", line 21, in <module>
+    assert is_woodall(383) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:46:47.626540,improved_reflection_test_20261027_234301,mbpp_20,improved_reflection,4,correction,False,0.8617041110992432,"from sympy import primefactors
+
+def is_woodall(n):
+    return sorted(primefactors(n)) == list(range(1, len(primefactors(n))+1))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpln6oy_nm.py"", line 3, in <module>
+    from sympy import primefactors
+ModuleNotFoundError: No module named 'sympy'
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpln6oy_nm.py"", line 3, in <module>
+    from sympy import primefactors
+ModuleNotFoundError: No module named 'sympy'
+"
+2026-10-27T23:46:49.216524,improved_reflection_test_20261027_234301,mbpp_59,improved_reflection,1,correction,False,1.588667392730713,"def nth_octagonal(n):
+    return n*(3*n-2)//2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp3r5gkebz.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^
+NameError: name 'is_octagonal' is not defined. Did you mean: 'nth_octagonal'?
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp3r5gkebz.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^
+NameError: name 'is_octagonal' is not defined. Did you mean: 'nth_octagonal'?
+"
+2026-10-27T23:47:32.385171,improved_reflection_test_20261027_234301,mbpp_59,improved_reflection,2,correction,False,0.7289426326751709,"def is_octagonal(n):
+    return n*(3*n-2)//2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp6g28ndho.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp6g28ndho.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:48:10.924098,improved_reflection_test_20261027_234301,mbpp_59,improved_reflection,3,correction,False,0.6839265823364258,assert is_octagonal(5) == 65,"Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpqy26c8ri.py"", line 3, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^
+NameError: name 'is_octagonal' is not defined
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpqy26c8ri.py"", line 3, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^
+NameError: name 'is_octagonal' is not defined
+"
+2026-10-27T23:48:47.661579,improved_reflection_test_20261027_234301,mbpp_59,improved_reflection,4,correction,False,1.0326182842254639,"def is_octagonal(n):
+    return n*(5*n-3)//2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpiqix3nli.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpiqix3nli.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:48:49.337936,improved_reflection_test_20261027_234301,mbpp_63,improved_reflection,1,correction,False,1.6746313571929932,"def max_difference(pairs):
+    if not pairs:
+        return 0
+    min_price = float('inf')
+    max_difference = 0
+    for pair in pairs:
+        min_price = min(min_price, pair[0])
+        max_difference = max(max_difference, pair[1] - min_price)
+    return max_difference","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpngcx79lf.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpngcx79lf.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:49:56.288000,improved_reflection_test_20261027_234301,mbpp_63,improved_reflection,2,correction,False,1.8846807479858398,"def max_difference(pairs):
+    if not pairs:
+        return 0
+    min_price = float('inf')
+    max_difference = 0
+    for pair in pairs:
+        min_price = min(min_price, pair[0])
+        max_difference = max(max_difference, pair[1] - min_price)
+    return max_difference","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpelhqs2p_.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpelhqs2p_.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:51:04.211257,improved_reflection_test_20261027_234301,mbpp_63,improved_reflection,3,correction,False,0.7251262664794922,"def max_difference(pairs):
+    if not pairs:
+        return 0
+    min_price = float('inf')
+    max_difference = 0
+    for pair in pairs:
+        min_price = min(min_price, pair[0])
+        max_difference = max(max_difference, max(pair) - min_price)
+    return max_difference","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp42xtxfvz.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp42xtxfvz.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:52:20.270493,improved_reflection_test_20261027_234301,mbpp_63,improved_reflection,4,correction,False,0.907536506652832,"def max_difference(pairs):
+    if not pairs:
+        return 0
+    min_price = float('inf')
+    max_difference = 0
+    for pair in pairs:
+        min_price = min(min_price, pair[0])
+        max_difference = max(max_difference, pair[1] - min_price)
+    return max_difference","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpi1vh4p83.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpi1vh4p83.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:52:21.685884,improved_reflection_test_20261027_234301,mbpp_69,improved_reflection,1,correction,False,1.4130525588989258,"def is_sublist(main_list, sub_list):
+    return sub_list in main_list","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzbdu8w2n.py"", line 27, in <module>
+    assert is_sublist([2,4,3,5,7],[4,3])==True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzbdu8w2n.py"", line 27, in <module>
+    assert is_sublist([2,4,3,5,7],[4,3])==True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-10-27T23:53:19.189101,improved_reflection_test_20261027_234301,mbpp_69,improved_reflection,2,correction,True,0.6138961315155029,"def is_sublist(main_list, sub_list):
+    if len(sub_list) > len(main_list):
+        return False
+    for i in range(len(main_list) - len(sub_list) + 1):
+        if main_list[i:i + len(sub_list)] == sub_list:
+            return True
+    return False",,
+2026-10-27T23:53:20.765023,improved_reflection_test_20261027_234301,mbpp_95,improved_reflection,1,correction,False,1.5729312896728516,"def find_min_length(lst):
+    return min(len(sub_lst) for sub_lst in lst)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp8qeevfo5.py"", line 8, in <module>
+    assert Find_Min_Length([[1],[1,2]]) == 1
+           ^^^^^^^^^^^^^^^
+NameError: name 'Find_Min_Length' is not defined. Did you mean: 'find_min_length'?
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp8qeevfo5.py"", line 8, in <module>
+    assert Find_Min_Length([[1],[1,2]]) == 1
+           ^^^^^^^^^^^^^^^
+NameError: name 'Find_Min_Length' is not defined. Did you mean: 'find_min_length'?
+"
+2026-10-27T23:53:48.604172,improved_reflection_test_20261027_234301,mbpp_95,improved_reflection,2,correction,True,0.6763038635253906,"def Find_Min_Length(lst):
+    return min(len(sub_lst) for sub_lst in lst)",,

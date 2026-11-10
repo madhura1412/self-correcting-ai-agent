@@ -1,0 +1,18 @@
+timestamp,run_id,problem_id,feedback_strategy,attempt,attempt_type,success,execution_time,code,error,test_feedback
+2026-10-27T12:28:30.614155,reflection_prompt_test_20261027_122753,mbpp_11,reflection,1,initial,True,0.8727424144744873,"def remove_Occ(s, ch):
+    s = list(s)
+    s.remove(ch) if ch in s else None
+    s.remove(ch) if ch in s[::-1] else None
+    return ''.join(s)
+
+print(remove_Occ(""hello"", ""l""))",,
+2026-10-27T12:28:44.713577,reflection_prompt_test_20261027_122753,mbpp_12,reflection,1,initial,True,0.8254671096801758,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)
+
+sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])",,
+2026-10-27T12:28:53.690862,reflection_prompt_test_20261027_122753,mbpp_14,reflection,1,initial,True,0.7764797210693359,"def find_Volume(a, b, h):
+    return 0.5 * a * b * h",,
+2026-10-27T12:29:04.364096,reflection_prompt_test_20261027_122753,mbpp_16,reflection,1,initial,True,0.8265640735626221,"def text_lowercase_underscore(text):
+    return all(c.islower() or c=='_' for c in text)",,
+2026-10-27T12:29:12.599983,reflection_prompt_test_20261027_122753,mbpp_17,reflection,1,initial,True,0.7370436191558838,"def square_perimeter(side_length):
+    return 4 * side_length",,

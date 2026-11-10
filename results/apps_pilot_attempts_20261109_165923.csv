@@ -1,0 +1,578 @@
+problem_id,strategy,attempt,passed,passed_tests,total_tests,code,test_results
+3000,baseline,1,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp)
+            else:
+                stack[-1] += temp
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,baseline,2,False,0,6,"import sys
+
+MOD = 10**9+7
+
+def solve(n, s):
+    stack = []
+    for token in s:
+        if token == '(':
+            continue
+        elif token == ')':
+            num1 = stack.pop()
+            operation = stack.pop()
+            num2 = stack.pop()
+            if operation == '+':
+                res = (num1 + num2) % MOD
+            else:
+                res = (num1 * num2) % MOD
+            stack.append(res)
+        else:
+            stack.append(int(token))
+    return stack[0]
+
+n = int(sys.stdin.readline().strip())
+s = sys.stdin.readline().strip().split()
+print(solve(n, s))","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,baseline,3,False,0,6,"import sys
+
+MOD = 10**9+7
+
+def solve():
+    n = int(sys.stdin.readline().strip())
+    tokens = sys.stdin.readline().strip().split()
+    stack = []
+    for token in tokens:
+        if token == '(':
+            continue
+        elif token == ')':
+            right = stack.pop()
+            op = stack.pop()
+            left = stack.pop()
+            if op == '+':
+                res = (left + right) % MOD
+            else:
+                res = (left * right) % MOD
+            stack.append(res)
+        else:
+            stack.append(int(token))
+    print(stack[0])
+
+if __name__ == ""__main__"":
+    solve()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,baseline,4,False,0,6,"import sys
+
+MOD = 10**9+7
+
+def solve():
+    n = int(sys.stdin.readline().strip())
+    tokens = sys.stdin.readline().strip().split()
+    stack = []
+    for token in tokens:
+        if token == '(':
+            continue
+        elif token == ')':
+            right = stack.pop()
+            op = stack.pop()
+            left = stack.pop()
+            if op == '+':
+                res = (left + right) % MOD
+            else:
+                res = (left * right) % MOD
+            stack.append(res)
+        else:
+            stack.append(int(token))
+    print(stack[0])
+
+if __name__ == ""__main__"":
+    solve()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,baseline,5,False,0,6,"import sys
+
+MOD = 10**9+7
+
+def solve():
+    n = int(sys.stdin.readline().strip())
+    tokens = sys.stdin.readline().strip().split()
+    stack = []
+    for token in tokens:
+        if token == '(':
+            continue
+        elif token == ')':
+            right = stack.pop()
+            op = stack.pop()
+            left = stack.pop()
+            if op == '+':
+                res = (left + right) % MOD
+            else:
+                res = (left * right) % MOD
+            stack.append(res)
+        else:
+            stack.append(int(token))
+    print(stack[0])
+
+if __name__ == ""__main__"":
+    solve()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,execution,1,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp)
+            else:
+                stack[-1] += temp
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,execution,2,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,execution,3,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,execution,4,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,execution,5,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,unit_test,1,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp)
+            else:
+                stack[-1] += temp
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,unit_test,2,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,unit_test,3,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,unit_test,4,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,unit_test,5,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] + temp) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,reflection,1,False,0,6,"import sys
+
+MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp)
+            else:
+                stack[-1] += temp
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(sys.stdin.readline().strip())
+    s = sys.stdin.readline().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,reflection,2,False,0,6,"MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp)
+            else:
+                stack[-1] += temp
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(input().strip())
+    s = input().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,reflection,3,False,0,6,"MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] * (temp % MOD)) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(input().strip())
+    s = input().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,reflection,4,False,0,6,"MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] * (temp % MOD)) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    n = int(input().strip())
+    s = input().strip().split()
+    print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"
+3000,reflection,5,False,0,6,"MOD = 10**9 + 7
+
+def solve(n, s):
+    stack = []
+    for i in range(n):
+        if s[i] == ')':
+            temp = 0
+            while stack[-1] != '(':
+                temp += stack.pop()
+                stack.pop()
+            stack.pop()
+            if not stack or stack[-1] == '(':
+                stack.append(temp % MOD)
+            else:
+                stack[-1] = (stack[-1] * (temp % MOD)) % MOD
+        elif s[i] != '(':
+            stack.append(int(s[i]))
+        else:
+            stack.append(s[i])
+    return sum(stack) % MOD
+
+def main():
+    t = int(input().strip())
+    for _ in range(t):
+        n = int(input().strip())
+        s = input().strip().split()
+        print(solve(n, s))
+
+if __name__ == ""__main__"":
+    main()","[{""test"": 1, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 2, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""9\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 3, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""36\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 4, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 5, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""5\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}, {""test"": 6, ""passed"": false, ""status"": ""runtime_error"", ""expected"": ""1\n"", ""actual"": """", ""stderr"": ""failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n""}]"

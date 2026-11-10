@@ -1,0 +1,9 @@
+benchmark,strategy,problems,pass_at_1_pct,final_success_pct,initial_failures,recovered,recovery_rate_pct,average_attempts,total_execution_time_sec,average_execution_time_sec
+HumanEval,baseline,164,70.1200,84.1500,49,23,46.9400,1.8400,108.1211,0.3580
+HumanEval,execution,164,70.1200,80.4900,49,17,34.6900,1.9900,137.9421,0.4231
+HumanEval,unit_test,164,70.1200,79.8800,49,16,32.6500,2.0100,120.4203,0.3660
+HumanEval,reflection,164,70.1200,81.1000,49,18,36.7300,1.9900,112.7047,0.3447
+MBPP,baseline,100,60.0000,75.0000,40,15,37.5000,2.2800,49.8855,0.2169
+MBPP,execution,100,60.0000,70.0000,40,10,25.0000,2.3300,65.7602,0.2798
+MBPP,unit_test,100,60.0000,73.0000,40,13,32.5000,2.3400,72.1464,0.3057
+MBPP,reflection,100,60.0000,74.0000,40,14,35.0000,2.2900,57.0229,0.2469

@@ -1,0 +1,140 @@
+timestamp,problem_id,initial_success,correction_success,execution_time,previous_code,corrected_code,error
+2026-11-05T20:16:28,mbpp_14,False,False,0.5633,"def find_Volume(a, b, c):
+    return 0.5 * b * c","def find_Volume(a, b, c):
+    return 0.5 * b * c","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp7er4bhvp.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-11-05T20:16:45,mbpp_16,False,False,0.5298,"def text_lowercase_underscore(text):
+    return '_' in text","def text_lowercase_underscore(text):
+    return any(char.islower() and text[i+1].islower() for i, char in enumerate(text[:-1])) and '_' in text","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzzoj1_js.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-11-05T20:17:16,mbpp_20,False,False,0.5317,"def is_woodall(n):
+    def digits_product(x):
+        product = 1
+        for digit in str(x):
+            product *= int(digit)
+        return product
+
+    previous = []
+    while n not in previous:
+        previous.append(n)
+        n = digits_product(n)
+
+    return n == 1","def is_woodall(n):
+    def digits_product(x):
+        product = 1
+        for digit in str(x):
+            product *= int(digit)
+        return product
+
+    previous = set()
+    while n not in previous:
+        previous.add(n)
+        n = digitsproduct(n)
+
+    return n == 1","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmplxx_rpcn.py"", line 19, in <module>
+    assert is_woodall(383) == True
+           ~~~~~~~~~~^^^^^
+  File ""C:\Users\madhu\AppData\Local\Temp\tmplxx_rpcn.py"", line 13, in is_woodall
+    n = digitsproduct(n)
+        ^^^^^^^^^^^^^
+NameError: name 'digitsproduct' is not defined. Did you mean: 'digits_product'?
+"
+2026-11-05T20:17:31,mbpp_59,False,False,0.526,"def nth_octagonal(n):
+    return n*(3*n-2)//2","def is_octagonal(n):
+    return n*(3*n-2)//2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpqpnbypcu.py"", line 8, in <module>
+    assert is_octagonal(5) == 65
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-11-05T20:18:00,mbpp_63,False,False,0.5035,"def max_difference(pairs):
+    if not pairs:
+        return 0
+    min_price = float('inf')
+    max_difference = 0
+    for pair in pairs:
+        min_price = min(min_price, pair[0])
+        max_difference = max(max_difference, pair[1] - min_price)
+    return max_difference","def max_difference(pairs):
+    if not pairs:
+        return 0
+    min_price = float('inf')
+    max_difference = 0
+    for pair in pairs:
+        min_price = min(min_price, pair[0])
+        max_difference = max(max_difference, pair[1] - min_price)
+    return max_difference","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpbmfd7f_7.py"", line 15, in <module>
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-11-05T20:18:15,mbpp_64,False,True,0.4837,"def sort_tuples(lst):
+    return sorted(lst, key=lambda x: x[1])","def subject_marks(lst):
+    return sorted(lst, key=lambda x: x[1])",
+2026-11-05T20:18:37,mbpp_69,False,True,0.499,"def is_sublist(main_list, sub_list):
+    return sub_list in main_list","def is_sublist(main_list, sub_list):
+    return [i for i in range(len(main_list)) if main_list[i:i+len(sub_list)] == sub_list] != []",
+2026-11-05T20:19:04,mbpp_72,False,False,0.5844,"def dif_Square(n):
+    i = 0
+    while(i*i <= n):
+        j = 0
+        while(j*j <= n):
+            if(i*i + j*j == n):
+                return True
+            j +=1
+        i +=1
+    return False","def dif_Square(n):
+    i = 0
+    while(i*i <= n):
+        j = 0
+        while(j*j <= n):
+            if(i*i + j*j == n):
+                return True
+            j += 1
+        i += 1
+    return False","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpab7dyb46.py"", line 35, in <module>
+    assert dif_Square(10) == False
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-11-05T20:19:30,mbpp_74,False,False,0.5051,"def is_samepatterns(pattern1, pattern2):
+    if len(pattern1) != len(pattern2):
+        return False
+    for i in range(len(pattern1)):
+        if pattern1[i] != pattern2[i]:
+            return False
+    return True","def is_samepatterns(pattern1, pattern2):
+    if len(pattern1) != len(pattern2):
+        return False
+    for i in range(len(pattern1)):
+        if pattern1[i] != pattern2[i]:
+            return False
+    return True","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn766o7z9.py"", line 13, in <module>
+    assert is_samepatterns([""red"",""green"",""green""], [""a"", ""b"", ""b""])==True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+"
+2026-11-05T20:19:46,mbpp_82,False,False,0.5051,"import math
+
+def sphere_volume(radius):
+    return (4/3) * math.pi * radius**3","import math
+
+def sphere_volume(radius):
+    return (4/3) * math.pi * radius**3","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpgy1px6kh.py"", line 10, in <module>
+    assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)
+                        ^^^^^^^^^^^^^
+NameError: name 'volume_sphere' is not defined
+"

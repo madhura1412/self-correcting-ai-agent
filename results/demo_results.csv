@@ -1,0 +1,543 @@
+2026-10-01T12:07:18.548323,20261001_120613,mbpp_11,baseline,1,initial,True,2.1741,"def remove_Occ(s, ch):
+    first_index = s.find(ch)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(ch)
+        if last_index != -1:
+            s = s[:last_index] + s[last_index+1:]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:20.871301,20261001_120613,mbpp_11,execution,1,initial,True,2.3086,"def remove_Occ(s, ch):
+    first_index = s.find(ch)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(ch)
+        if last_index != -1:
+            s = s[:last_index] + s[last_index+1:]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:22.051048,20261001_120613,mbpp_11,unit_test,1,initial,True,1.1751,"def remove_Occ(s, ch):
+    first_index = s.find(ch)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(ch)
+        if last_index != -1:
+            s = s[:last_index] + s[last_index+1:]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:24.155875,20261001_120613,mbpp_11,reflection,1,initial,True,2.1015,"def remove_Occ(s, ch):
+    first_index = s.find(ch)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(ch)
+        if last_index != -1:
+            s = s[:last_index] + s[last_index+1:]
+    return s",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:41.793995,20261001_120613,mbpp_12,baseline,1,initial,True,1.2007,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:43.893649,20261001_120613,mbpp_12,execution,1,initial,True,2.0963,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:44.967167,20261001_120613,mbpp_12,unit_test,1,initial,True,1.0707,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:07:46.598492,20261001_120613,mbpp_12,reflection,1,initial,True,1.6285,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:08:04.409963,20261001_120613,mbpp_14,baseline,1,initial,True,1.4429,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:08:06.545062,20261001_120613,mbpp_14,execution,1,initial,True,2.1318,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:08:07.701247,20261001_120613,mbpp_14,unit_test,1,initial,True,1.1534,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:08:09.800998,20261001_120613,mbpp_14,reflection,1,initial,True,2.096,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:08:33.798169,20261001_120613,mbpp_16,baseline,1,initial,False,1.2966,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() or ""_"" not in input_string or not input_string.isalpha()","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpisifavhc.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-01T12:09:04.843096,20261001_120613,mbpp_16,baseline,2,correction,True,1.1344,"def text_lowercase_underscore(s: str) -> bool:
+    return all(c.islower() or c == ""_"" for c in s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:09:07.028143,20261001_120613,mbpp_16,execution,1,initial,False,2.183,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() or ""_"" not in input_string or not input_string.isalpha()","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp5i755bda.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-01T12:10:27.417111,20261001_120613,mbpp_16,execution,2,correction,True,1.0255,"def text_lowercase_underscore(input_string):
+    split_string = input_string.split('_')
+    for part in split_string:
+        if not part.islower():
+            return False
+    return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:10:29.572681,20261001_120613,mbpp_16,unit_test,1,initial,False,2.1529,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() or ""_"" not in input_string or not input_string.isalpha()","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpcs_5sqw_.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-01T12:10:58.844783,20261001_120613,mbpp_16,unit_test,2,correction,True,1.0245,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() and ""_"" in input_string and not input_string.isalpha()",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:11:00.981096,20261001_120613,mbpp_16,reflection,1,initial,False,2.134,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() or ""_"" not in input_string or not input_string.isalpha()","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpuqihtu3b.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-01T12:11:34.782551,20261001_120613,mbpp_16,reflection,2,correction,False,1.5104,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() and ""_"" in input_string and input_string.isalpha()","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpmirswxrn.py"", line 8, in <module>
+    assert text_lowercase_underscore(""aab_cbbbc"")==(True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_cbbbc"")==(True)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-01T12:12:31.536972,20261001_120613,mbpp_16,reflection,3,correction,True,1.8482,"def text_lowercase_underscore(input_string):
+    return input_string == input_string.lower() and ""_"" in input_string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:12:46.747909,20261001_120613,mbpp_17,baseline,1,initial,True,1.2534,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:12:48.401631,20261001_120613,mbpp_17,execution,1,initial,True,1.651,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:12:49.965211,20261001_120613,mbpp_17,unit_test,1,initial,True,1.5609,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-01T12:12:51.520950,20261001_120613,mbpp_17,reflection,1,initial,True,1.5541,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:36.540997,20261022_111148,mbpp_11,baseline,1,initial,True,0.1923,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index + 1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index + 1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:36.619747,20261022_111148,mbpp_11,execution,1,initial,True,0.0747,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index + 1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index + 1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:36.694383,20261022_111148,mbpp_11,unit_test,1,initial,True,0.0726,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index + 1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index + 1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:36.772938,20261022_111148,mbpp_11,reflection,1,initial,True,0.0767,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index + 1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index + 1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:48.229175,20261022_111148,mbpp_12,baseline,1,initial,True,0.1227,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:48.315290,20261022_111148,mbpp_12,execution,1,initial,True,0.0836,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:48.390390,20261022_111148,mbpp_12,unit_test,1,initial,True,0.0728,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:12:48.461644,20261022_111148,mbpp_12,reflection,1,initial,True,0.0693,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:13:02.454880,20261022_111148,mbpp_14,baseline,1,initial,True,0.1262,"def find_Volume(base, height, length):
+    # Calculate volume of triangular prism
+    volume = (base * height * length) / 2
+    return volume",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:13:02.547100,20261022_111148,mbpp_14,execution,1,initial,True,0.0899,"def find_Volume(base, height, length):
+    # Calculate volume of triangular prism
+    volume = (base * height * length) / 2
+    return volume",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:13:02.620180,20261022_111148,mbpp_14,unit_test,1,initial,True,0.0707,"def find_Volume(base, height, length):
+    # Calculate volume of triangular prism
+    volume = (base * height * length) / 2
+    return volume",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:13:02.689996,20261022_111148,mbpp_14,reflection,1,initial,True,0.0676,"def find_Volume(base, height, length):
+    # Calculate volume of triangular prism
+    volume = (base * height * length) / 2
+    return volume",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:13:32.556078,20261022_111148,mbpp_16,baseline,1,initial,False,0.2242,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpf65w_gyf.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:13:51.326772,20261022_111148,mbpp_16,baseline,2,correction,True,0.1055,"def text_lowercase_underscore(text):
+    return all(c.islower() or c == '_' for c in text)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T11:13:51.463641,20261022_111148,mbpp_16,execution,1,initial,False,0.1339,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpk8hxmx7b.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:14:54.255944,20261022_111148,mbpp_16,execution,2,correction,False,0.1923,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == ""_"" for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpr4homxpe.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:15:51.901497,20261022_111148,mbpp_16,execution,3,correction,False,0.1945,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == ""_"" for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1c1xrivj.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:16:18.921091,20261022_111148,mbpp_16,execution,4,correction,False,0.1927,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == ""_"" for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp_xertlxt.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:17:03.380010,20261022_111148,mbpp_16,execution,5,correction,False,0.1448,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == ""_"" for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpclowpka9.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:17:03.512556,20261022_111148,mbpp_16,unit_test,1,initial,False,0.122,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmplkcbxfur.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T11:17:36.363395,20261022_111148,mbpp_16,unit_test,2,correction,False,0.1392,"def text_lowercase_underscore(text):
+    return any(x.islower() and y == '_' and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp73kvk2lf.py"", line 46, in <module>
+    assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: PASS
+TEST 3: FAIL
+FAILED TEST: assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:24:10.736696,20261022_111148,mbpp_16,unit_test,3,correction,False,29142.8567,"def text_lowercase_underscore(text):
+    return any(x.islower() and y == '_' and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpp1pldjok.py"", line 46, in <module>
+    assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: PASS
+TEST 3: FAIL
+FAILED TEST: assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:25:34.968004,20261022_111148,mbpp_16,unit_test,4,correction,False,0.909,"def text_lowercase_underscore(text):
+    return any(x.islower() and y == '_' and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpbis7z0j9.py"", line 46, in <module>
+    assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: PASS
+TEST 3: FAIL
+FAILED TEST: assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:26:24.483256,20261022_111148,mbpp_16,unit_test,5,correction,False,0.3078,"def text_lowercase_underscore(text):
+    return any(x.islower() and y == '_' and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpdu8iltcq.py"", line 46, in <module>
+    assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: PASS
+TEST 3: FAIL
+FAILED TEST: assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:26:24.671738,20261022_111148,mbpp_16,reflection,1,initial,False,0.183,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmporg0_jyg.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:27:50.553645,20261022_111148,mbpp_16,reflection,2,correction,False,0.2081,"def text_lowercase_underscore(text):
+    return any(y == '_' and x.islower() and z.islower() for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpwjea6h3b.py"", line 46, in <module>
+    assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: PASS
+TEST 3: FAIL
+FAILED TEST: assert text_lowercase_underscore(""Aaab_abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:28:59.663337,20261022_111148,mbpp_16,reflection,3,correction,False,0.2178,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == '_' for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpvi_usf43.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:30:06.552433,20261022_111148,mbpp_16,reflection,4,correction,False,0.2717,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == '_' for x, y, z in zip(text, text[1:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn5ngy52t.py"", line 8, in <module>
+    assert text_lowercase_underscore(""aab_cbbbc"")==(True)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn5ngy52t.py"", line 4, in text_lowercase_underscore
+    return any(x.islower() and y.islower() and z == '_' for x, y, z in zip(text, text[1:]))
+           ^^^
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn5ngy52t.py"", line 4, in <genexpr>
+    return any(x.islower() and y.islower() and z == '_' for x, y, z in zip(text, text[1:]))
+                                                            ^^^^^^^
+ValueError: not enough values to unpack (expected 3, got 2)
+","TEST 1: ERROR
+FAILED TEST: assert text_lowercase_underscore(""aab_cbbbc"")==(True)
+ERROR TYPE: ValueError
+ERROR MESSAGE: not enough values to unpack (expected 3, got 2)
+"
+2026-10-22T19:30:58.783950,20261022_111148,mbpp_16,reflection,5,correction,False,0.3719,"def text_lowercase_underscore(text):
+    return any(x.islower() and y.islower() and z == '_' for x, y, z in zip(text, text[1:], text[2:]))","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpc7ktn3ue.py"", line 27, in <module>
+    assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+","TEST 1: PASS
+TEST 2: FAIL
+FAILED TEST: assert text_lowercase_underscore(""aab_Abbbc"")==(False)
+ERROR TYPE: AssertionError
+ERROR MESSAGE: 
+"
+2026-10-22T19:31:14.151764,20261022_111148,mbpp_17,baseline,1,initial,True,0.177,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T19:31:14.252425,20261022_111148,mbpp_17,execution,1,initial,True,0.0969,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T19:31:14.333406,20261022_111148,mbpp_17,unit_test,1,initial,True,0.0786,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-10-22T19:31:14.426613,20261022_111148,mbpp_17,reflection,1,initial,True,0.0903,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"

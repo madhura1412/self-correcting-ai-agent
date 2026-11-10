@@ -1,0 +1,321 @@
+timestamp,run_id,problem_id,feedback_strategy,attempt,success,execution_time,code,error,test_feedback
+2026-08-26T02:37:35.035490,20260826_023620,mbpp_11,baseline,1,True,2.9794,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index+1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index+1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:37:37.252120,20260826_023620,mbpp_11,execution,1,True,2.2065,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index+1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index+1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:37:38.571577,20260826_023620,mbpp_11,unit_test,1,True,1.3134,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index+1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index+1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:37:40.215356,20260826_023620,mbpp_11,reflection,1,True,1.6398,"def remove_Occ(string, char):
+    first_index = string.find(char)
+    if first_index != -1:
+        string = string[:first_index] + string[first_index+1:]
+        last_index = string.rfind(char)
+        if last_index != -1:
+            string = string[:last_index] + string[last_index+1:]
+    return string",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:03.105887,20260826_023620,mbpp_12,baseline,1,True,1.3793,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:04.151405,20260826_023620,mbpp_12,execution,1,True,1.0301,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:08.370881,20260826_023620,mbpp_12,unit_test,1,True,4.1592,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:10.596828,20260826_023620,mbpp_12,reflection,1,True,2.2094,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:32.552965,20260826_023620,mbpp_14,baseline,1,True,2.6133,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:35.152921,20260826_023620,mbpp_14,execution,1,True,2.5861,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:36.898314,20260826_023620,mbpp_14,unit_test,1,True,1.7422,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:38:38.675300,20260826_023620,mbpp_14,reflection,1,True,1.7737,"def find_Volume(base, height, length):
+    return 0.5 * base * height * length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:03.333466,20260826_023620,mbpp_16,baseline,1,True,1.7904,"def text_lowercase_underscore(s):
+    return all(c.islower() or c == '_' for c in s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:05.450622,20260826_023620,mbpp_16,execution,1,True,2.1108,"def text_lowercase_underscore(s):
+    return all(c.islower() or c == '_' for c in s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:06.893965,20260826_023620,mbpp_16,unit_test,1,True,1.4394,"def text_lowercase_underscore(s):
+    return all(c.islower() or c == '_' for c in s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:09.072152,20260826_023620,mbpp_16,reflection,1,True,2.173,"def text_lowercase_underscore(s):
+    return all(c.islower() or c == '_' for c in s)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:28.596683,20260826_023620,mbpp_17,baseline,1,True,2.2399,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:30.400411,20260826_023620,mbpp_17,execution,1,True,1.7994,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:32.974692,20260826_023620,mbpp_17,unit_test,1,True,2.5714,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:39:35.503616,20260826_023620,mbpp_17,reflection,1,True,2.526,"def square_perimeter(side_length):
+    return 4 * side_length",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:02.549175,20260826_023620,mbpp_18,baseline,1,True,2.2985,"def remove_dirty_chars(str1, str2):
+    for char in str2:
+        if char in str1:
+            str1 = str1.replace(char, '')
+    return str1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:05.851875,20260826_023620,mbpp_18,execution,1,True,3.2965,"def remove_dirty_chars(str1, str2):
+    for char in str2:
+        if char in str1:
+            str1 = str1.replace(char, '')
+    return str1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:07.288019,20260826_023620,mbpp_18,unit_test,1,True,1.4319,"def remove_dirty_chars(str1, str2):
+    for char in str2:
+        if char in str1:
+            str1 = str1.replace(char, '')
+    return str1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:09.452517,20260826_023620,mbpp_18,reflection,1,True,2.1602,"def remove_dirty_chars(str1, str2):
+    for char in str2:
+        if char in str1:
+            str1 = str1.replace(char, '')
+    return str1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:36.021840,20260826_023620,mbpp_19,baseline,1,True,2.9965,"def test_duplicate(lst):
+    if len(lst) == len(set(lst)):
+        return False
+    else:
+        return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:39.718304,20260826_023620,mbpp_19,execution,1,True,3.6914,"def test_duplicate(lst):
+    if len(lst) == len(set(lst)):
+        return False
+    else:
+        return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:41.405659,20260826_023620,mbpp_19,unit_test,1,True,1.6839,"def test_duplicate(lst):
+    if len(lst) == len(set(lst)):
+        return False
+    else:
+        return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:40:43.619799,20260826_023620,mbpp_19,reflection,1,True,2.1989,"def test_duplicate(lst):
+    if len(lst) == len(set(lst)):
+        return False
+    else:
+        return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:12.592583,20260826_023620,mbpp_20,baseline,1,True,1.5229,"def is_woodall(n):
+    if n % 2 == 0:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:14.718591,20260826_023620,mbpp_20,execution,1,True,2.1227,"def is_woodall(n):
+    if n % 2 == 0:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:16.182589,20260826_023620,mbpp_20,unit_test,1,True,1.4601,"def is_woodall(n):
+    if n % 2 == 0:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:17.878834,20260826_023620,mbpp_20,reflection,1,True,1.6929,"def is_woodall(n):
+    if n % 2 == 0:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:39.154940,20260826_023620,mbpp_56,baseline,1,True,1.4341,"def check(number):
+    reverse_number = int(str(number)[::-1])
+    return number == (2 * reverse_number) - 1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:41.848271,20260826_023620,mbpp_56,execution,1,True,2.688,"def check(number):
+    reverse_number = int(str(number)[::-1])
+    return number == (2 * reverse_number) - 1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:44.090726,20260826_023620,mbpp_56,unit_test,1,True,2.2391,"def check(number):
+    reverse_number = int(str(number)[::-1])
+    return number == (2 * reverse_number) - 1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:41:46.204267,20260826_023620,mbpp_56,reflection,1,True,2.1104,"def check(number):
+    reverse_number = int(str(number)[::-1])
+    return number == (2 * reverse_number) - 1",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:42:10.403963,20260826_023620,mbpp_57,baseline,1,True,2.5403,"def find_Max_Num(num_list):
+    num_list = [str(i) for i in num_list]
+    num_list.sort(reverse=True)
+    return int(''.join(num_list))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:42:13.522277,20260826_023620,mbpp_57,execution,1,True,3.1144,"def find_Max_Num(num_list):
+    num_list = [str(i) for i in num_list]
+    num_list.sort(reverse=True)
+    return int(''.join(num_list))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:42:15.057601,20260826_023620,mbpp_57,unit_test,1,True,1.5304,"def find_Max_Num(num_list):
+    num_list = [str(i) for i in num_list]
+    num_list.sort(reverse=True)
+    return int(''.join(num_list))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-26T02:42:17.367837,20260826_023620,mbpp_57,reflection,1,True,2.3048,"def find_Max_Num(num_list):
+    num_list = [str(i) for i in num_list]
+    num_list.sort(reverse=True)
+    return int(''.join(num_list))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"

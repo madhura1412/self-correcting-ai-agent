@@ -1,0 +1,5 @@
+problem_id,strategy,initial_pass,final_pass,attempts,passed_tests,total_tests,execution_time
+3000,baseline,False,False,5,0,6,312.93
+3000,execution,False,False,5,0,6,562.64
+3000,unit_test,False,False,5,0,6,442.0
+3000,reflection,False,False,5,0,6,697.49

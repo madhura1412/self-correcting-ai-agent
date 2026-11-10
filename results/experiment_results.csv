@@ -1,0 +1,923 @@
+timestamp,problem_id,feedback_strategy,attempt,success,execution_time,code,error,test_feedback
+2026-08-18T11:44:37.071390,divide_numbers_001,unit_test,1,True,2.2012,"def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T11:54:04.239612,divide_numbers_001,reflection,1,False,1.7164,"
+def divide_numbers(a, b):
+    return a + b
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmps4lzm6gx.py"", line 18, in <module>
+    raise AssertionError(""Unit test failed"")
+AssertionError: Unit test failed
+","TEST 1: FAIL
+INPUT: (10, 2)
+EXPECTED: 5
+ACTUAL: 12
+TEST 1: ERROR
+INPUT: (10, 2)
+EXPECTED: 5
+ERROR: AssertionError Unit test failed
+"
+2026-08-18T11:54:42.797847,divide_numbers_001,reflection,2,True,2.6028,"def divide_numbers(a, b):
+    if b == 0:
+        return 0
+    else:
+        return a / b",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T11:57:04.778931,divide_numbers_001,baseline,1,False,1.1077,"
+def divide_numbers(a, b):
+    return a + b
+","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpuxsq2g_l.py"", line 18, in <module>
+    raise AssertionError(""Unit test failed"")
+AssertionError: Unit test failed
+","TEST 1: FAIL
+INPUT: (10, 2)
+EXPECTED: 5
+ACTUAL: 12
+TEST 1: ERROR
+INPUT: (10, 2)
+EXPECTED: 5
+ERROR: AssertionError Unit test failed
+"
+2026-08-18T11:57:18.368141,divide_numbers_001,baseline,2,True,2.4122,"def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:02:06.120929,divide_numbers_001,baseline,1,True,2.2287,"def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:02:08.278535,divide_numbers_001,execution,1,True,2.1546,"def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:02:10.130098,divide_numbers_001,unit_test,1,True,1.8493,"def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:02:12.249768,divide_numbers_001,reflection,1,True,2.1175,"def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:21.888868,add_numbers_001,baseline,1,True,2.6833,"def add_numbers(a, b):
+    return a + b",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:25.420568,add_numbers_001,execution,1,True,3.5284,"def add_numbers(a, b):
+    return a + b",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:27.134291,add_numbers_001,unit_test,1,True,1.7118,"def add_numbers(a, b):
+    return a + b",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:28.849592,add_numbers_001,reflection,1,True,1.7135,"def add_numbers(a, b):
+    return a + b",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:37.290986,is_even_002,baseline,1,True,2.3066,"def is_even(n):
+    return n % 2 == 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:40.749141,is_even_002,execution,1,True,3.4564,"def is_even(n):
+    return n % 2 == 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:42.387110,is_even_002,unit_test,1,True,1.6362,"def is_even(n):
+    return n % 2 == 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:44.184740,is_even_002,reflection,1,True,1.7959,"def is_even(n):
+    return n % 2 == 0",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:51.941487,reverse_string_003,baseline,1,True,2.043,"def reverse_string(text):
+    return text[::-1]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:54.111036,reverse_string_003,execution,1,True,2.1675,"def reverse_string(text):
+    return text[::-1]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:56.381719,reverse_string_003,unit_test,1,True,2.2685,"def reverse_string(text):
+    return text[::-1]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:13:57.741932,reverse_string_003,reflection,1,True,1.3581,"def reverse_string(text):
+    return text[::-1]",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:07.832868,find_maximum_004,baseline,1,True,1.9869,"def find_maximum(numbers):
+    if not numbers:
+        return None
+    return max(numbers)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:09.991322,find_maximum_004,execution,1,True,2.1563,"def find_maximum(numbers):
+    if not numbers:
+        return None
+    return max(numbers)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:12.237924,find_maximum_004,unit_test,1,True,2.2448,"def find_maximum(numbers):
+    if not numbers:
+        return None
+    return max(numbers)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:13.513485,find_maximum_004,reflection,1,True,1.2737,"def find_maximum(numbers):
+    if not numbers:
+        return None
+    return max(numbers)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:25.330762,count_vowels_005,baseline,1,True,2.4007,"def count_vowels(text):
+    text = text.lower()
+    return sum(map(text.count, ""aeiou""))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:28.778247,count_vowels_005,execution,1,True,3.4457,"def count_vowels(text):
+    text = text.lower()
+    return sum(map(text.count, ""aeiou""))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:30.248956,count_vowels_005,unit_test,1,True,1.4689,"def count_vowels(text):
+    text = text.lower()
+    return sum(map(text.count, ""aeiou""))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:14:32.398920,count_vowels_005,reflection,1,True,2.1481,"def count_vowels(text):
+    text = text.lower()
+    return sum(map(text.count, ""aeiou""))",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+TEST 4: PASS
+All tests passed!
+"
+2026-08-18T12:32:40.762314,mbpp_11,baseline,1,False,1.4525,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpbu47nweo.py"", line 19
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:32:56.091751,mbpp_11,baseline,2,False,1.3704,"def remove_first_last(s, char):
+    s = list(s)
+    s.remove(char) if char in s else None
+    s.remove(char) if char in s else None
+    return ''.join(s)","  File ""C:\Users\madhu\AppData\Local\Temp\tmprwb1vujb.py"", line 16
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:33:13.669182,mbpp_11,baseline,3,False,1.2661,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(c)
+        if last_index != -1:
+            s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmp5pjfsu8_.py"", line 19
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:33:52.504342,mbpp_11,baseline,4,False,3.2022,"def remove_char(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s.replace(c, '', s[::-1].find(c))
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpbkj7ibvv.py"", line 16
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:34:06.058023,mbpp_11,baseline,5,False,2.3972,"def remove_char(s, c):
+    if c in s:
+        s = s.replace(c, '', 1)
+        s = s.replace(c, '', s[::-1].index(c))
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpruepp_72.py"", line 16
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:34:07.913504,mbpp_11,execution,1,False,1.8527,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpudyd0fov.py"", line 19
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:34:49.406520,mbpp_11,execution,2,False,2.5387,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+print(""FAILED TEST: 'assert remove_occurrences(\""hello\"",\""l\"") == \""heo\""'"")","  File ""C:\Users\madhu\AppData\Local\Temp\tmp_3_5f6h6.py"", line 21
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:35:28.693349,mbpp_11,execution,3,False,1.749,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+print(""FAILED TEST: 'assert remove_occurrences(\""hello\"",\""l\"") == \""heo\""'"")","  File ""C:\Users\madhu\AppData\Local\Temp\tmpvd7agkb4.py"", line 21
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:36:01.306999,mbpp_11,execution,4,False,1.3342,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+print(""FAILED TEST: 'assert remove_occurrences(\""hello\"",\""l\"") == \""heo\""'"")","  File ""C:\Users\madhu\AppData\Local\Temp\tmpvjrv2qf0.py"", line 21
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:36:43.018130,mbpp_11,execution,5,False,2.5841,"The error in your code is that you're trying to print a failed test as a string, but you're using a single quote ' instead of double quotes "" for the string. Here is the corrected code:
+
+```python
+def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+print(""FAILED TEST: \""assert remove_occurrences(\'hello\',\'l\') == \'heo\'\"""")","  File ""C:\Users\madhu\AppData\Local\Temp\tmp0ehq9b6s.py"", line 3
+    The error in your code is that you're trying to print a failed test as a string, but you're using a single quote ' instead of double quotes "" for the string. Here is the corrected code:
+                                                                                                                     ^
+SyntaxError: unterminated string literal (detected at line 3)
+",
+2026-08-18T12:36:45.339720,mbpp_11,unit_test,1,False,2.3174,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpz1vzlotm.py"", line 19
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:39:40.219460,mbpp_11,unit_test,2,False,2.5286,"The provided code was correct until the string was being re-assigned after the first and last occurrence of the character were found. This meant that if the string had more than one occurrence of the character, the changes made would have been lost. The solution should return the string with the first and last occurrence of the character removed.
+
+Here is the corrected Python code:
+
+```python
+def remove_occurrences(s, c):
+    while c in s:
+        first_index = s.find(c)
+        if first_index != -1:
+            s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(c)
+        if last_index != -1 and last_index != first_index:
+            s = s[:last_index] + s[last_index+1:]
+    return s
+```
+
+This code loops until the character is no longer in the string. It finds the first and last occurrence of the character in the string, removes them, and then continues to the next iteration. If the character is not in the string, the while loop will break and the function will return the string.","  File ""C:\Users\madhu\AppData\Local\Temp\tmpgo0130dv.py"", line 3
+    The provided code was correct until the string was being re-assigned after the first and last occurrence of the character were found. This meant that if the string had more than one occurrence of the character, the changes made would have been lost. The solution should return the string with the first and last occurrence of the character removed.
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T12:40:17.160563,mbpp_11,unit_test,3,False,1.2773,"def remove_occurrences(s, c):
+    while c in s:
+        first_index = s.find(c)
+        if first_index != -1:
+            s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(c)
+        if last_index != -1 and last_index != first_index:
+            s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpwv0c9iw3.py"", line 20
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:40:44.173920,mbpp_11,unit_test,4,False,2.6038,"def remove_occurrences(s, c):
+    while c in s:
+        first_index = s.find(c)
+        if first_index != -1:
+            s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(c)
+        if last_index != -1 and last_index != first_index:
+            s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpknthn8b4.py"", line 20
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:41:19.859973,mbpp_11,unit_test,5,False,1.2617,"The code you provided is correct. However, it only removes the first and last occurrences of a character. If you want to remove all occurrences except the first and last, you can modify the function as follows:
+
+```python
+def remove_occurrences(s, c):
+    while c in s:
+        first_index = s.find(c)
+        if first_index != -1:
+            s = s[:first_index] + s[first_index+1:]
+        last_index = s.rfind(c)
+        if last_index != -1 and last_index != first_index:
+            s = s[:last_index] + s[last_index+1:]
+        s = s.replace(c, '')
+    return s
+```
+
+This function will keep the first and last occurrence of the character and remove all others. If the character doesn't exist in the string, it will return the original string.","  File ""C:\Users\madhu\AppData\Local\Temp\tmphj20xwii.py"", line 18
+    This function will keep the first and last occurrence of the character and remove all others. If the character doesn't exist in the string, it will return the original string.
+                                                                                                                        ^
+SyntaxError: unterminated string literal (detected at line 18)
+",
+2026-08-18T12:41:21.731380,mbpp_11,reflection,1,False,1.8682,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmpvzpz1s5x.py"", line 19
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:41:50.190226,mbpp_11,reflection,2,False,3.9219,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s","  File ""C:\Users\madhu\AppData\Local\Temp\tmp80g8y6hk.py"", line 19
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:42:19.866748,mbpp_11,reflection,3,False,2.4709,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+print(""FAILED TEST: 'assert remove_occurrences(""hello"",""l"") == ""heo""'"")","  File ""C:\Users\madhu\AppData\Local\Temp\tmphe2o0pq2.py"", line 12
+    print(""FAILED TEST: 'assert remove_occurrences(""hello"",""l"") == ""heo""'"")
+                                                    ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:43:41.016974,mbpp_11,reflection,4,False,2.8983,"The previous solution failed because of the incorrect usage of the print function and string formatting. It seems like the test was trying to print a string directly, which is not valid syntax. 
+
+The function should be tested using the assert statement instead. Also, the test string should be passed as a raw string to avoid escape characters.
+
+Here's the corrected solution:
+
+```python
+def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+assert remove_occurrences(r""hello"", ""l"") == ""heo""","  File ""C:\Users\madhu\AppData\Local\Temp\tmpfe5lgvpy.py"", line 7
+    Here's the corrected solution:
+        ^
+SyntaxError: unterminated string literal (detected at line 7)
+",
+2026-08-18T12:44:23.486939,mbpp_11,reflection,5,False,2.5542,"def remove_occurrences(s, c):
+    first_index = s.find(c)
+    if first_index != -1:
+        s = s[:first_index] + s[first_index+1:]
+    last_index = s.rfind(c)
+    if last_index != -1 and last_index != first_index:
+        s = s[:last_index] + s[last_index+1:]
+    return s
+
+assert remove_occurrences(r""hello"", ""l"") == ""heo""","  File ""C:\Users\madhu\AppData\Local\Temp\tmpepc1ktp6.py"", line 21
+    print(""FAILED TEST: 'assert remove_Occ(""hello"",""l"") == ""heo""'"")
+                                            ^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+",
+2026-08-18T12:44:42.268626,mbpp_12,baseline,1,False,2.7135,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+# Test the function
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp6ve4kc3z.py"", line 13, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T12:44:50.507370,mbpp_12,baseline,2,True,1.2228,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)",,"TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T12:44:53.484129,mbpp_12,execution,1,False,2.9747,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+# Test the function
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpbxm9_fhd.py"", line 13, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T12:45:21.708062,mbpp_12,execution,2,False,1.2668,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+# Test the function
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sortmatrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmporly6l4s.py"", line 8, in <module>
+    sorted_matrix = sortmatrix_rows(matrix)
+                    ^^^^^^^^^^^^^^^
+NameError: name 'sortmatrix_rows' is not defined. Did you mean: 'sort_matrix_rows'?
+",
+2026-08-18T12:45:43.996401,mbpp_12,execution,3,False,2.4881,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp6b4_2x1n.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:40:02.798121,mbpp_12,execution,4,False,1.5268,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9v2488zj.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:40:30.142799,mbpp_12,execution,5,False,2.3171,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpa7mzda_m.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:40:32.945847,mbpp_12,unit_test,1,False,2.7973,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+# Test the function
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpzco422br.py"", line 13, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:40:57.561361,mbpp_12,unit_test,2,False,2.2887,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn26qx5sp.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:41:16.949511,mbpp_12,unit_test,3,False,1.3627,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1i3msmci.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:41:29.803266,mbpp_12,unit_test,4,False,1.3035,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpd8l1xlpo.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:41:44.077492,mbpp_12,unit_test,5,False,2.2692,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpjzb2nuok.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:41:46.403977,mbpp_12,reflection,1,False,2.3187,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+# Test the function
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpqrn5_4ww.py"", line 13, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:42:11.214024,mbpp_12,reflection,2,False,2.3511,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpt_vp2iex.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:42:37.096924,mbpp_12,reflection,3,False,1.4154,"def sort_matrix_rows(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix_rows(matrix)
+print(sorted_matrix)","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpvnfglzfm.py"", line 12, in <module>
+    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+           ^^^^^^^^^^^
+NameError: name 'sort_matrix' is not defined. Did you mean: 'sorted_matrix'?
+","[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+"
+2026-08-18T13:43:16.222039,mbpp_12,reflection,4,False,3.2413,"The previous solution failed because the function name `sort_matrix_rows` is being used incorrectly. It should be `sort_matrix`. The corrected solution is as follows:
+
+```python
+def sort_matrix(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix(matrix)
+print(sorted_matrix)","  File ""C:\Users\madhu\AppData\Local\Temp\tmpmy7togwp.py"", line 3
+    The previous solution failed because the function name `sort_matrix_rows` is being used incorrectly. It should be `sort_matrix`. The corrected solution is as follows:
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T13:43:53.039345,mbpp_12,reflection,5,True,2.3224,"def sort_matrix(matrix):
+    return sorted(matrix, key=sum)
+
+matrix = [[5, 1, 2], [1, 2, 1], [4, 3, 2]]
+sorted_matrix = sort_matrix(matrix)
+print(sorted_matrix)",,"[[1, 2, 1], [5, 1, 2], [4, 3, 2]]
+TEST 1: PASS
+TEST 2: PASS
+TEST 3: PASS
+All MBPP tests passed!
+"
+2026-08-18T13:44:10.296968,mbpp_14,baseline,1,False,2.6622,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9ppfk03o.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:44:23.008162,mbpp_14,baseline,2,False,2.8757,"def volume_of_triangular_prism(base_area, height):
+    return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpknmng6gv.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:44:30.649486,mbpp_14,baseline,3,False,1.3407,"def find_volume(base_length, base_width, height):
+    return (base_length * base_width * height) / 2","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmptf9jwcfb.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined. Did you mean: 'find_volume'?
+",
+2026-08-18T13:44:39.062204,mbpp_14,baseline,4,False,2.6153,"def volume_of_triangular_prism(base_area, height):
+    return (1/2) * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpswmcfku9.py"", line 8, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:44:50.442054,mbpp_14,baseline,5,False,2.7631,"Here's the Python code to find the volume of a triangular prism:
+
+```python
+def triangular_prism_volume(base_area, height, length):
+    return (1/2) * base_area * height * length","  File ""C:\Users\madhu\AppData\Local\Temp\tmpnz_o9e2i.py"", line 3
+    Here's the Python code to find the volume of a triangular prism:
+        ^
+SyntaxError: unterminated string literal (detected at line 3)
+",
+2026-08-18T13:44:52.880493,mbpp_14,execution,1,False,2.434,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpz4zj5ymz.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:45:15.428800,mbpp_14,execution,2,False,1.3357,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1rrx6h5x.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:45:31.735791,mbpp_14,execution,3,False,1.3527,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp1wxtaq49.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:45:48.228302,mbpp_14,execution,4,False,1.3842,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpn2lhwmjl.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:46:05.281556,mbpp_14,execution,5,False,1.5621,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpbwkjph8q.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:46:07.825760,mbpp_14,unit_test,1,False,2.5418,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmprf3ghxzh.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:46:24.797494,mbpp_14,unit_test,2,False,2.4417,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpjg9eenzp.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:46:40.710492,mbpp_14,unit_test,3,False,2.1283,"The function definition was correct, so the issue might be in the unit tests.
+
+```python
+def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","  File ""C:\Users\madhu\AppData\Local\Temp\tmpg7bce3wx.py"", line 3
+    The function definition was correct, so the issue might be in the unit tests.
+        ^^^^^^^^
+SyntaxError: invalid syntax
+",
+2026-08-18T13:47:01.376606,mbpp_14,unit_test,4,False,2.6556,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpj5bl5r25.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:47:17.377424,mbpp_14,unit_test,5,False,3.3668,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpvuyt_bgn.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:47:19.894630,mbpp_14,reflection,1,False,2.5123,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmp9h3ey7by.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:47:41.629568,mbpp_14,reflection,2,False,1.3683,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpp5qnxt14.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:48:02.214343,mbpp_14,reflection,3,False,2.6938,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmphm5eyjyt.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:48:21.986038,mbpp_14,reflection,4,False,2.6392,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpkqaeatjm.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
+2026-08-18T13:48:39.997890,mbpp_14,reflection,5,False,2.3265,"def volume_of_triangular_prism(base_area, height):
+    if base_area <= 0 or height <= 0:
+        return ""Invalid input. Both base area and height should be greater than 0.""
+    else:
+        return 0.5 * base_area * height","Traceback (most recent call last):
+  File ""C:\Users\madhu\AppData\Local\Temp\tmpd5idg3k9.py"", line 11, in <module>
+    assert find_Volume(10,8,6) == 240
+           ^^^^^^^^^^^
+NameError: name 'find_Volume' is not defined
+",
